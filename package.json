@@ -1,0 +1,53 @@
+{
+  "name": "blanca-realestate-react",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^5.2.2",
+    "@iconify/react": "^6.0.2",
+    "@tanstack/react-query": "^5.90.21",
+    "@tanstack/react-query-devtools": "^5.91.3",
+    "animate.css": "^4.1.1",
+    "axios": "^1.13.6",
+    "bootstrap": "^5.3.8",
+    "country-state-city": "^3.2.1",
+    "framer-motion": "^12.34.3",
+    "gsap": "^3.14.2",
+    "isotope-layout": "^3.0.6",
+    "jquery": "^4.0.0",
+    "jquery.appear": "^1.0.1",
+    "jquery.ripples": "^0.6.3",
+    "magnific-popup": "^1.2.0",
+    "next": "^15.5.3",
+    "react": "^19.2.0",
+    "react-bootstrap": "^2.10.10",
+    "react-dom": "^19.2.0",
+    "react-dropzone": "^15.0.0",
+    "react-fast-marquee": "^1.6.5",
+    "react-helmet-async": "^3.0.0",
+    "react-hook-form": "^7.71.2",
+    "react-phone-input-2": "^2.15.1",
+    "react-player": "^3.4.0",
+    "react-select": "^5.10.2",
+    "react-select-country-list": "^2.2.3",
+    "react-slick": "^0.31.0",
+    "slick-carousel": "^1.8.1",
+    "swiper": "^12.1.2",
+    "yup": "^1.7.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "eslint": "^9.39.1",
+    "eslint-config-next": "^15.5.3",
+    "globals": "^16.5.0"
+  }
+}

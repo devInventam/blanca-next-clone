@@ -1,0 +1,216 @@
+/* Interior & Exterior Section Redesign */
+.interior-exterior-section {
+    padding-bottom: 60px;
+}
+
+.gallery-main-slider-wrap {
+    position: relative;
+}
+
+.gallery-column-header {
+    position: relative;
+    z-index: 20;
+    pointer-events: none;
+    margin-bottom: 24px;
+}
+
+.gallery-title {
+    color: #fff;
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin: 0;
+    padding-left: 15px;
+    border-left: 3px solid #3A6FF8;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Carousel Adjustments */
+.carousel-item img {
+    width: 100%;
+    aspect-ratio: 16/11;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* Indicators (Dots) Styling */
+.gallery-main-slider-wrap .carousel-indicators {
+    position: absolute;
+    bottom: -40px !important;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    z-index: 50 !important;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: none;
+    padding: 0;
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+.carousel-indicators .active {
+    background-color: #fff;
+    transform: scale(1.2);
+}
+
+/* Ensure indicators are visible outside of carousel */
+.carousel {
+    overflow: visible;
+}
+
+/* Navigation Arrows */
+.gallery-nav-arrows {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    pointer-events: none;
+    z-index: 30;
+}
+
+.gallery-prev,
+.gallery-next {
+    width: 50px;
+    height: 50px;
+    font-size: 16px;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    pointer-events: auto;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--lg-text);
+    border: 1px solid var(--lg-highlight);
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease, border-color 0.2s ease, backdrop-filter 0.4s ease;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.gallery-prev::after,
+.gallery-next::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    box-shadow: inset 1px 1px 0 var(--lg-highlight), inset 0 0 5px var(--lg-highlight);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.gallery-prev::before,
+.gallery-next::before {
+    content: "";
+    position: absolute;
+    inset: -10px;
+    background: radial-gradient(circle at 30% 20%, rgb(255 255 255 / 8%), rgba(255, 255, 255, 0) 55%), radial-gradient(circle at 80% 80%, rgb(243 237 237 / 10%), rgba(0, 0, 0, 0) 60%), radial-gradient(circle, rgb(229 237 232 / 5%), rgb(249 244 244 / 0%) 55%);
+    opacity: 0.9;
+    pointer-events: none;
+}
+
+.gallery-prev:hover,
+.gallery-next:hover {
+    background: #fff !important;
+    color: #000 !important;
+    border-color: #fff !important;
+}
+
+/* Thumbnails */
+.gallery-thumb-slider-wrap {
+    position: absolute;
+    bottom: 18px;
+    left: 24px;
+    right: 24px;
+    z-index: 25;
+}
+
+.gallery-thumb-slider {
+    display: flex;
+    gap: 12px;
+}
+
+.thumb-slide {
+    flex: 1;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+
+.thumb-slide img {
+    width: 100%;
+    aspect-ratio: 16/10;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    opacity: 0.7;
+}
+
+.thumb-slide.active img {
+    border-color: #fff;
+    opacity: 1;
+    transform: translateY(-5px);
+}
+
+.thumb-slide:hover img {
+    opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+
+    .gallery-title {
+        font-size: 1.25rem;
+    }
+
+    .gallery-main-slider-wrap {
+        margin-bottom: 60px;
+    }
+
+    .carousel-item img {
+        height: 350px;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    .interior-exterior-section {
+        padding: 40px 0 40px;
+    }
+}
+
+@media (max-width: 767px) {
+    .gallery-nav-arrows {
+        padding: 0 10px;
+    }
+
+    .gallery-nav-arrows button {
+        width: 40px;
+        height: 40px;
+    }
+
+    .gallery-thumb-slider-wrap {
+        display: none;
+    }
+
+    .carousel-item img {
+        height: 250px;
+    }
+
+    .gallery-main-slider-wrap .carousel-indicators {
+        bottom: -30px !important;
+    }
+}

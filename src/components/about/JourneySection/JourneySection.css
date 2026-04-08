@@ -1,0 +1,444 @@
+/* Journey of Innovation Timeline Styles */
+
+.journey-innovation-section {
+    position: relative;
+    /* height: 100vh; */
+    width: 100%;
+    /* background-color: #0d0d0d; */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    padding: 80px 0 0;
+}
+
+.journey-container.journey-marquee {
+    position: relative;
+    width: 100%;
+    min-height: 840px;
+    height: 100%;
+    overflow-y: hidden;
+    overflow-x: auto;
+    padding: 0px 0px 100px 0px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    -webkit-overflow-scrolling: touch;
+    cursor: grab;
+    user-select: none;
+}
+
+.journey-container.journey-marquee::-webkit-scrollbar {
+    display: none;
+}
+
+.journey-container.journey-marquee:active {
+    cursor: grabbing;
+}
+
+.journey-content-inner {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    white-space: nowrap;
+    width: max-content;
+    min-width: 100%;
+    position: relative;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.journey-loop-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+}
+
+.journey-loop-segment {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+}
+
+/* Central Timeline Line */
+.timeline-track {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #0a1f4d 0%, #1e4bb5 50%, #0a1f4d 100%);
+    /* height: 32px;
+    background-image: url('../images/logos/favicon.png');
+    background-repeat: repeat-x;
+    background-size: contain;
+    background-position: center; */
+    transform: translateY(-50%);
+    z-index: 1;
+    opacity: 0.6;
+}
+
+.journey-item {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    width: 450px;
+    /* Increased spacing */
+    flex-shrink: 0;
+    z-index: 2;
+}
+
+/* Slanted Year Blocks */
+.year-block {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) skewX(-25deg);
+    width: 240px;
+    height: 50px;
+    background: linear-gradient(135deg, #1e4bb5 0%, #0a1f4d 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.journey-item:hover .year-block {
+    transform: translateY(-50%) skewX(-25deg) scale(1.1);
+    background: linear-gradient(135deg, #1e4bb5 0%, #2a6df2 100%);
+    box-shadow: 0 0 20px rgba(30, 75, 181, 0.6);
+}
+
+.year-text {
+    transform: skewX(25deg);
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+/* Project Info Content */
+.journeyproject-card {
+    position: absolute;
+    width: 420px;
+    white-space: normal;
+    background: rgba(17, 17, 17, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 12px;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+a.journeyproject-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+a.journeyproject-card:focus-visible {
+    outline: 2px solid #1e4bb5;
+    outline-offset: 3px;
+}
+
+.journey-item:hover .journeyproject-card {
+    border-color: rgba(30, 75, 181, 0.5);
+    transform: translateY(-5px);
+    background: rgba(22, 22, 22, 0.95);
+}
+
+/* Connectors (Dashed Lines) */
+.journeyproject-card::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    border-left: 2px dashed rgba(30, 75, 181, 0.4);
+    height: 70px;
+    transition: all 0.3s ease;
+}
+
+.journey-item:hover .journeyproject-card::before {
+    border-left-color: #1e4bb5;
+    height: 70px;
+    z-index: 0;
+}
+
+/* Above the line */
+.journeyproject-card.above {
+    bottom: 50px;
+}
+
+.journeyproject-card.above::before {
+    bottom: -70px;
+    left: 200px;
+}
+
+/* Below the line */
+.journeyproject-card.below {
+    top: 50px;
+}
+
+.journeyproject-card.below::before {
+    top: -70px;
+    left: 200px;
+}
+
+.project-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #fff;
+    letter-spacing: 0.5px;
+}
+
+.project-meta {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+}
+
+.project-meta i {
+    color: #1e4bb5;
+}
+
+.project-description {
+    font-size: 14px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Special styling for Large Labels like "Focus on Building..." */
+.timeline-label {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.3);
+    z-index: 3;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    pointer-events: none;
+}
+
+/* Image styling if any */
+.project-image {
+    width: 100%;
+    max-height: 150px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    opacity: 0.9;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 1600px) {
+    .project-image {
+        max-height: 124px;
+    }
+}
+
+.journey-item:hover .project-image {
+    opacity: 1;
+}
+
+/* Marker category style */
+.category-marker {
+    background: rgba(30, 75, 181, 0.2);
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    border: 1px solid rgba(30, 75, 181, 0.5);
+    display: inline-block;
+    backdrop-filter: blur(5px);
+}
+
+/* Animation control - REMOVED */
+.journey-marquee:hover {
+    animation-play-state: paused;
+}
+
+/* Section Header */
+.journey-header {
+    margin-bottom: 60px;
+}
+
+.journey-header .sub-title {
+    color: #1e4bb5;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.journey-header .section-title {
+    font-size: 48px;
+    font-weight: 700;
+    color: #fff;
+    margin-top: 10px;
+}
+
+/* Responsive */
+/* Responsive adjustments */
+
+/* Small Laptop / Large Tablet (992px - 1199px) */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .journey-item {
+        width: 400px;
+    }
+
+    .journeyproject-card {
+        width: 350px;
+    }
+}
+
+/* Tablet View (768px - 991px) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .journey-innovation-section {
+        padding: 60px 0 0;
+    }
+
+    .journey-container.journey-marquee {
+        min-height: 1040px;
+    }
+
+    .journey-item {
+        width: 350px;
+    }
+
+    .journeyproject-card {
+        width: 300px;
+    }
+
+    .year-block {
+        width: 210px;
+    }
+
+    .year-text {
+        font-size: 20px;
+    }
+}
+
+/* Mobile View (320px - 767px) */
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    .journey-innovation-section {
+        padding: 40px 0 0;
+    }
+
+    .journey-container.journey-marquee {
+        min-height: 805px;
+        padding-bottom: 60px;
+    }
+
+    .journey-item {
+        width: 280px;
+    }
+
+    .journeyproject-card {
+        width: 240px;
+        padding: 12px;
+    }
+
+    .project-image {
+        max-height: 100px;
+    }
+
+    .project-title {
+        font-size: 16px;
+    }
+
+    .project-description {
+        font-size: 12px;
+    }
+
+    .year-block {
+        width: 170px;
+        height: 40px;
+    }
+
+    .year-text {
+        font-size: 16px;
+    }
+
+    .timeline-track {
+        height: 2px;
+    }
+
+    .journeyproject-card.below::before {
+        left: 120px;
+    }
+
+    .journeyproject-card.above::before {
+        left: 120px;
+    }
+}
+
+/* Responsive */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .journey-innovation-section {
+        height: auto;
+        padding: 60px 0;
+    }
+
+    .journey-container {
+        padding: 50px 0;
+    }
+
+    .journeyproject-card {
+        width: 260px;
+    }
+
+    .journey-item {
+        width: 350px;
+    }
+
+    .journeyproject-card.below::before {
+        left: 140px;
+    }
+
+    .journeyproject-card.above::before {
+        left: 140px;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .journey-innovation-section {
+        height: auto;
+        padding: 60px 0;
+    }
+
+    .journey-container.journey-marquee {
+        min-height: 916px;
+    }
+
+    .journeyproject-card.below::before {
+        left: 172px;
+    }
+
+    .journeyproject-card.above::before {
+        left: 172px;
+    }
+}

@@ -1,0 +1,185 @@
+export const jobs = [
+  {
+    id: 1,
+    title: "Sales Manager",
+    category: "Sales",
+    description:
+      "Leads the sales team, drives revenue, and ensures consistent conversion of leads into bookings.",
+    responsibilities: [
+      "Plan and execute sales strategies for residential & commercial projects",
+      "Manage and mentor sales executives",
+      "Track leads, site visits, bookings, and collections",
+      "Coordinate with marketing for campaigns and walk-ins",
+      "Build long-term relationships with channel partners and clients",
+      "Prepare sales forecasts and performance reports",
+    ],
+  },
+  {
+    id: 2,
+    title: "Sales Executive / Property Consultant",
+    category: "Sales",
+    description:
+      "Frontline role responsible for customer interaction and closing deals.",
+    responsibilities: [
+      "Handle walk-in, digital, and referral leads",
+      "Conduct site visits and explain project details",
+      "Follow up with prospects and negotiate deals",
+      "Maintain CRM records and client documentation",
+      "Support booking and agreement processes",
+      "Achieve monthly sales targets",
+    ],
+  },
+  {
+    id: 3,
+    title: "Channel Partner Manager",
+    category: "Sales",
+    description:
+      "Manages relationships with brokers and channel partners to expand sales reach.",
+    responsibilities: [
+      "Onboard and manage channel partners",
+      "Conduct CP meets and training sessions",
+      "Share inventory updates, schemes, and offers",
+      "Monitor CP performance and payouts",
+      "Ensure transparent communication and compliance",
+    ],
+  },
+  {
+    id: 4,
+    title: "Marketing Manager",
+    category: "Marketing",
+    description:
+      "Builds brand presence and drives qualified leads through strategic marketing.",
+    responsibilities: [
+      "Plan and execute online & offline marketing campaigns",
+      "Manage branding, hoardings, brochures, and events",
+      "Coordinate with digital agencies and vendors",
+      "Track campaign performance and ROI",
+      "Align marketing communication with brand vision",
+      "Support sales with lead generation initiatives",
+    ],
+  },
+  {
+    id: 5,
+    title: "Digital Marketing Executive",
+    category: "Marketing",
+    description:
+      "Handles digital platforms to generate leads and strengthen online presence.",
+    responsibilities: [
+      "Manage Google Ads, Meta Ads, and social media platform",
+      "Optimize website content and SEO",
+      "Track leads and campaign analytics",
+      "Coordinate with designers and content creators",
+      "Improve cost per lead and conversion ratios",
+    ],
+  },
+  {
+    id: 6,
+    title: "Project Manager",
+    category: "Development",
+    description:
+      "Ensures timely, cost-effective, and quality execution of real estate projects.",
+    responsibilities: [
+      "Plan project schedules and milestones",
+      "Coordinate with architects, contractors, and consultants",
+      "Monitor site progress, quality, and safety",
+      "Control project costs and material procurement",
+      "Ensure adherence to approvals and timelines",
+      "Report progress to management",
+    ],
+  },
+  {
+    id: 7,
+    title: "Site Engineer (Civil)",
+    category: "Development",
+    description:
+      "Executes construction work as per drawings and quality standards.",
+    responsibilities: [
+      "Supervise daily site activities",
+      "Ensure work is executed as per drawings and specifications",
+      "Coordinate with contractors and labor",
+      "Maintain site records and measurements",
+      "Ensure safety and quality compliance",
+      "Support timely completion of work",
+    ],
+  },
+  {
+    id: 8,
+    title: "Procurement / Purchase Officer",
+    category: "Operations",
+    description: "Manages sourcing of materials and vendors for projects.",
+    responsibilities: [
+      "Identify and negotiate with suppliers",
+      "Ensure timely availability of materials",
+      "Control procurement costs and quality",
+      "Maintain vendor relationships",
+      "Track inventory and billing",
+    ],
+  },
+  {
+    id: 9,
+    title: "Accounts Executive",
+    category: "Accountants",
+    description: "Handles financial transactions, billing, and compliance.",
+    responsibilities: [
+      "Maintain books of accounts",
+      "Handle customer billing and receipts",
+      "Coordinate with banks and auditors",
+      "Manage GST, TDS, and statutory filings",
+      "Track project-wise expenses and budgets",
+    ],
+  },
+  {
+    id: 10,
+    title: "Legal & Documentation Executive",
+    category: "Legal",
+    description:
+      "Ensures legal compliance and smooth documentation for projects and sales.",
+    responsibilities: [
+      "Draft and coordinate agreements, allotment letters, and MOUs",
+      "Liaise with solicitors and registration offices",
+      "Ensure RERA and statutory compliance",
+      "Maintain legal records and approvals",
+      "Support sales documentation and handovers",
+    ],
+  },
+  {
+    id: 11,
+    title: "CRM / Customer Relationship Manager",
+    category: "Customer Service",
+    description: "Manages customer experience from booking to possession.",
+    responsibilities: [
+      "Handle post-sales communication",
+      "Coordinate agreement registration and payment schedules",
+      "Address customer queries and concerns",
+      "Manage handover and possession process",
+      "Maintain accurate customer records",
+    ],
+  },
+  {
+    id: 12,
+    title: "HR & Admin Executive",
+    category: "Human Resources",
+    description: "Supports people management and office operations.",
+    responsibilities: [
+      "Recruitment and onboarding",
+      "Attendance, payroll coordination, and HR policies",
+      "Office administration and vendor management",
+      "Support employee engagement initiatives",
+      "Maintain compliance and records",
+    ],
+  },
+  {
+    id: 13,
+    title: "Front Office / Reception Executive",
+    category: "Administration",
+    description: "First point of contact for clients and visitors.",
+    responsibilities: [
+      "Handle incoming calls and visitors",
+      "Manage walk-in enquiries",
+      "Coordinate meetings and site visit schedules",
+      "Support sales and admin teams",
+      "Maintain front desk professionalism",
+      "Optional Section for Website",
+    ],
+  },
+];

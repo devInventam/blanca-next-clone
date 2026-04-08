@@ -1,0 +1,332 @@
+.about-page-section-three {
+    background-color: var(--black-100);
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-vision-banner {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.vision-content-part {
+    position: relative;
+}
+
+.vision-banner-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.vision-banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.vision-banner-top-right {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    z-index: 5;
+}
+
+.banner-highlight-list {
+    display: flex;
+    gap: 40px;
+}
+
+.banner-highlight-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.banner-highlight-slash {
+    width: 1.5px;
+    height: 30px;
+    background-color: var(--primary-color);
+    transform: rotate(25deg);
+}
+
+.banner-highlight-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.banner-highlight-title {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 500;
+}
+
+.banner-highlight-subtitle {
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.vision-banner-content {
+    position: absolute;
+    top: 60px;
+    left: 60px;
+    z-index: 5;
+}
+
+.banner-logo-branding {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.banner-logo-icon {
+    width: 90px;
+    height: auto;
+    display: block;
+}
+
+/* ── Shine wrapper ── */
+.banner-logo-shine-wrapper {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 4px;
+    width: 90px;
+}
+
+.banner-logo-shine-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(105deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.15) 40%,
+            rgba(255, 255, 255, 0.55) 50%,
+            rgba(255, 255, 255, 0.15) 60%,
+            rgba(255, 255, 255, 0) 100%);
+    animation: favicon-shine 3s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes favicon-shine {
+    0% {
+        left: -120%;
+    }
+
+    40% {
+        left: 160%;
+    }
+
+    100% {
+        left: 160%;
+    }
+}
+
+.banner-title {
+    font-size: 60px;
+    line-height: 1.2;
+    color: #fff;
+    text-transform: none;
+    letter-spacing: 1px;
+}
+
+.about-values-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4px);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease, border-color 0.2s ease, backdrop-filter 0.4s ease;
+    overflow: hidden;
+    isolation: isolate;
+    /* White background for the values row as per screenshot */
+    padding: 60px 0;
+}
+
+.about-values-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    /* max-width: 1400px; */
+    gap: 24px;
+    margin: 0 auto;
+}
+
+.value-card {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    padding: 0 15px;
+}
+
+.value-icon-box {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    color: var(--lg-text);
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid var(--lg-highlight);
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease, border-color 0.2s ease, backdrop-filter 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.value-icon-box::before {
+    content: "";
+    position: absolute;
+    inset: -10px;
+    background: radial-gradient(circle at 30% 20%, rgb(255 255 255 / 8%), rgba(255, 255, 255, 0) 55%), radial-gradient(circle at 80% 80%, rgb(243 237 237 / 10%), rgba(0, 0, 0, 0) 60%), radial-gradient(circle, rgb(229 237 232 / 5%), rgb(249 244 244 / 0%) 55%);
+    opacity: 0.9;
+    pointer-events: none;
+}
+
+.value-icon-box::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    box-shadow: inset 1px 1px 0 var(--lg-highlight), inset 0 0 5px var(--lg-highlight);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.value-icon-box i,
+.value-icon-box svg {
+    font-size: 32px;
+    color: #fff;
+}
+
+.value-text {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #fff;
+    /* Dark text matching icon box */
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Responsive Styles for Section 3 */
+@media (max-width: 1400px) {
+    .banner-title {
+        font-size: 56px;
+    }
+
+    .banner-highlight-list {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 1199px) {
+    .vision-banner-content {
+        left: 40px;
+        top: 40px;
+    }
+
+    .banner-title {
+        font-size: 48px;
+    }
+}
+
+@media (max-width: 991px) {
+    .about-vision-banner {
+        height: 60vh;
+        min-height: 400px;
+    }
+
+    .vision-banner-top-right {
+        top: 20px;
+        right: 20px;
+    }
+
+    .banner-highlight-list {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+
+    .banner-title {
+        font-size: 40px;
+    }
+
+    .about-values-container {
+        position: relative;
+        padding: 60px 0;
+        background-color: var(--black-100);
+    }
+
+    .about-values-row {
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+    }
+
+    .value-card {
+        flex: 0 0 calc(50% - 30px);
+    }
+}
+
+@media (max-width: 767px) {
+    .vision-banner-top-right {
+        display: none;
+    }
+
+    .vision-banner-content {
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .banner-title {
+        font-size: 32px;
+    }
+
+    .banner-logo-icon {
+        width: 70px;
+    }
+
+    .about-values-row {
+        gap: 20px;
+    }
+
+    .value-card {
+        flex: 0 0 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 576px) {
+    .value-card {
+        flex: 0 0 100%;
+        padding: 0;
+    }
+
+    .banner-title {
+        font-size: 28px;
+    }
+
+    .about-vision-banner {
+        height: 50vh;
+    }
+}

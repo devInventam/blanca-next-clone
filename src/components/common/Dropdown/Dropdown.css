@@ -1,0 +1,109 @@
+.custom-dropdown-container {
+    position: relative;
+    width: 100%;
+    z-index: 10;
+}
+
+.custom-dropdown-container.is-open {
+    z-index: 100;
+}
+
+.dropdown-trigger {
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 55px;
+    transition: all 0.3s ease;
+}
+
+.trigger-text {
+    font-size: 14px;
+    color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.trigger-text.placeholder-text {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.dropdown-arrow {
+    font-size: 18px;
+    color: #fff;
+    transition: transform 0.3s ease;
+}
+
+.dropdown-arrow.rotated {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu-list-common {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    width: 100%;
+    background: rgba(20, 20, 20, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    overflow: hidden;
+    z-index: 101;
+}
+
+.menu-scroll-container {
+    max-height: 250px;
+    overflow-y: auto;
+    padding: 8px 0;
+}
+
+/* Custom Scrollbar */
+.menu-scroll-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.menu-scroll-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.menu-scroll-container::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.menu-scroll-container::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.dropdown-item-common {
+    padding: 12px 20px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.2s ease;
+}
+
+.dropdown-item-common:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    padding-left: 24px;
+}
+
+.dropdown-item-common.selected {
+    background: rgba(74, 118, 201, 0.1);
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.dropdown-item-common .check-icon {
+    font-size: 16px;
+    color: var(--primary-color);
+}

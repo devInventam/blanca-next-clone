@@ -1,0 +1,54 @@
+.glass-textarea-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.form-control-textarea {
+    /* background: rgba(255, 255, 255, 0.05) !important; */
+    /* border: 1px solid rgba(255, 255, 255, 0.1) !important; */
+    /* color: #fff !important; */
+    border-radius: 12px !important;
+    padding: 15px 20px !important;
+    /* transition: all 0.3s ease !important; */
+    height: auto !important;
+    resize: vertical;
+    background: rgba(255, 255, 255, 0.08) !important;
+    color: var(--lg-text) !important;
+    border: 1px solid var(--lg-highlight) !important;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease, border-color 0.2s ease, backdrop-filter 0.4s ease !important;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.form-control-textarea::before {
+    content: "";
+    position: absolute;
+    inset: -10px;
+    background: radial-gradient(circle at 30% 20%, rgb(255 255 255 / 8%), rgba(255, 255, 255, 0) 55%), radial-gradient(circle at 80% 80%, rgb(243 237 237 / 10%), rgba(0, 0, 0, 0) 60%), radial-gradient(circle, rgb(229 237 232 / 5%), rgb(249 244 244 / 0%) 55%);
+    opacity: 0.9;
+    pointer-events: none;
+}
+
+.form-control-textarea::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    box-shadow: inset 1px 1px 0 var(--lg-highlight), inset 0 0 5px var(--lg-highlight);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.form-control-textarea:focus {
+    background: rgba(255, 255, 255, 0.08) !important;
+    border-color: var(--primary-color) !important;
+    box-shadow: 0 0 0 4px rgba(74, 118, 201, 0.1) !important;
+    outline: none !important;
+}
+
+.form-control-textarea::placeholder {
+    color: rgba(255, 255, 255, 0.3) !important;
+}

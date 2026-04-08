@@ -1,0 +1,190 @@
+/*-------Hero-area-2--------*/
+.hero-area-2 {
+    height: 100vh;
+    min-height: 100vh;
+}
+
+.hero-area-2 .hero-2-slider,
+.hero-area-2 .slick-list,
+.hero-area-2 .slick-track {
+    height: 100%;
+}
+
+.hero-2-item {
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    min-height: 100vh;
+    padding-top: 0;
+    padding-bottom: 0;
+    display: flex;
+    align-items: center;
+}
+
+.hero-area-2 .phone-title {
+    margin-bottom: 0;
+}
+
+.hero-area-2 .rotate {
+    transform: rotate(-90deg);
+    width: fit-content;
+}
+
+.light-mode .hero-area-2 .rotate {
+    color: var(--black-30);
+}
+
+.hero-area-2 .rotate.phone {
+    position: absolute;
+    left: 16px;
+    top: 43%;
+}
+
+.hero-area-2 .rotate.phone .number {
+    color: var(--primary-color);
+}
+
+.hero-area-2 .rotate.follow {
+    position: absolute;
+    right: 30px;
+    top: 50%;
+}
+
+.hero-area-2 .rotate i {
+    margin-top: 10px;
+    margin-right: 8px;
+    font-size: 32px;
+}
+
+.follow-line {
+    color: var(--black-30);
+    position: relative;
+}
+
+.hero-area-2 .follow-line:after {
+    content: '';
+    position: absolute;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    width: 64px;
+    height: 1px;
+    background: var(--black-30);
+    line-height: 1px;
+    left: 8px;
+    top: 13px;
+}
+
+.hero-area-2 .container-fluid {
+    padding: 0 40px;
+    height: 100%;
+}
+
+.hero-area-2 .container-fluid .row {
+    min-height: 100%;
+    align-items: center !important;
+}
+
+.hero-area-2 .container-fluid .row>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100%;
+    width: 100%;
+    padding-top: 64px;
+    padding-bottom: 64px;
+    height: 100vh;
+}
+
+.hero-area-2 .buttons {
+    margin-top: auto;
+    margin-bottom: 0;
+    margin-top: auto !important;
+}
+
+.hero-area-2 .buttons.mt-96 {
+    margin-top: auto !important;
+}
+
+.hero-area-2 .buttons a:not(:first-child) {
+    margin-left: 15px;
+}
+
+.hero-area-2 .slick-dots:before {
+    content: '';
+    position: absolute;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    width: 64px;
+    height: 1px;
+    background: var(--black-30);
+    line-height: 1px;
+    top: 14px;
+    margin-right: 32px;
+    left: 0;
+}
+
+.hero-area-2 .slick-dots {
+    padding-left: 96px;
+    width: fit-content;
+    position: absolute;
+    bottom: 87px;
+    left: 16%;
+    z-index: 2;
+}
+
+.hero-area-2 .slick-dots:after {
+    content: '';
+    position: absolute;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    width: 64px;
+    height: 1px;
+    background: var(--black-30);
+    line-height: 1px;
+    top: 14px;
+    margin-left: 32px;
+}
+
+.hero-area-2 .slick-dots li {
+    display: inline;
+}
+
+.hero-area-2 button.prev {
+    position: absolute;
+    right: calc(16% + 44px);
+    bottom: 96px;
+    z-index: 2;
+}
+
+.hero-area-2 button.next {
+    position: absolute;
+    right: 16%;
+    bottom: 96px;
+    z-index: 2;
+}
+
+.hero-area-2 .slick-dots li.slick-active button {
+    color: var(--primary-color);
+}
+
+.hero-area-2 .slick-dots li button {
+    background: unset;
+    color: var(--black-30);
+}
+
+.hero-area-2 .slick-dots li:not(:last-child) button {
+    margin-right: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+    .hero-area-2 .container-fluid .row>div {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

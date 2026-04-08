@@ -1,0 +1,61 @@
+.scroll-top {
+    position: fixed;
+    bottom: 60px;
+    right: 12px;
+    width: 50px;
+    height: 50px;
+    z-index: 99;
+    color: white;
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    background: transparent;
+    -webkit-animation: pulse 2s infinite;
+    animation: pulse 2s infinite;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    overflow: hidden;
+    border-radius: 2rem;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
+    isolation: isolate;
+    border: none;
+}
+
+.scroll-top.visible {
+    display: flex;
+}
+
+.scroll-top::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    filter: url(#lg-dist);
+    border-radius: inherit;
+}
+
+.scroll-top::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    border-radius: inherit;
+    box-shadow: inset 1px 1px 0 var(--lg-highlight), inset 0 0 5px var(--lg-highlight);
+    pointer-events: none;
+}
+
+.scroll-top>* {
+    position: relative;
+    z-index: 2;
+}
+
+@media only screen and (max-width: 768px) {
+    .scroll-top {
+        bottom: 40px;
+        right: 10px;
+    }
+}

@@ -1,0 +1,443 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+@font-face {
+    font-family: 'Colgent Regular';
+    src: url('../fonts/Colgent Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Smothing';
+    src: url('../fonts/Smothing.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Marjorie-regular';
+    src: url('../fonts/Marjorie-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Marjorie-italic';
+    src: url('../fonts/Marjorie-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/*******************************************************/
+/******************* ## Bootstrap Variables ******************/
+/*******************************************************/
+:root {
+    --bs-font-colgent-regular: "Colgent Regular", serif;
+    --bs-font-playfair-display: "Playfair Display", serif;
+    --bs-font-montserrat: "Montserrat", sans-serif;
+    --bs-font-inter: "Inter", sans-serif;
+    --bs-font-Smothing: "Smothing", serif;
+    --bs-font-Beauty-Story: "Beauty Story", serif;
+    --bs-font-Marjorie-regular: "Marjorie-regular", serif;
+    --bs-font-Marjorie-italic: "Marjorie-italic", serif;
+}
+
+/* Utility classes for fonts */
+.bs-font-colgent-regular {
+    font-family: var(--bs-font-colgent-regular);
+}
+
+.bs-font-playfair-display {
+    font-family: var(--bs-font-playfair-display);
+}
+
+.bs-font-montserrat {
+    font-family: var(--bs-font-montserrat);
+}
+
+.bs-font-inter {
+    font-family: var(--bs-font-inter);
+}
+
+.bs-font-Smothing {
+    font-family: var(--bs-font-Smothing);
+}
+
+.bs-font-Beauty-Story {
+    font-family: var(--bs-font-Beauty-Story);
+}
+
+.bs-font-Marjorie-regular {
+    font-family: var(--bs-font-Marjorie-regular);
+}
+
+.bs-font-Marjorie-italic {
+    font-family: var(--bs-font-Marjorie-italic);
+}
+
+.heading,
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+.tab-style-one .nav-link,
+h6,
+.h6 {
+    color: var(--black-30);
+}
+
+.light-mode .heading,
+.light-mode h1,
+.light-mode .h1,
+.light-mode h2,
+.light-mode .h2,
+.light-mode h3,
+.light-mode .h3,
+.light-mode h4,
+.light-mode .h4,
+.light-mode h5,
+.light-mode .h5,
+.light-mode .tab-style-one .nav-link,
+.light-mode h6,
+.light-mode .h6 {
+    color: var(--black-100);
+}
+
+
+
+@media(min-width: 992px) {
+
+    h1,
+    .h1 {
+        /* text-shadow: 2px 0 var(--black-30); */
+    }
+
+    h1.text-white,
+    .h1.text-white {
+        /* text-shadow: 2px 0 var(--heading-color); */
+    }
+
+    h2,
+    .h2 {
+        /* text-shadow: 2px 0 var(--black-30); */
+    }
+
+    .light-mode h2,
+    .light-mode .h2 {
+        /* text-shadow: 2px 0 var(--black-90); */
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    .giant-text {
+        font-size: 220px;
+        line-height: 0.8;
+        font-weight: 900;
+        letter-spacing: -6px;
+    }
+
+    .big-text {
+        font-size: 120px;
+        line-height: 1.2;
+        font-weight: 900;
+        letter-spacing: -10px;
+    }
+
+    .our-story-area .story-bg-text {
+        font-size: 240px;
+    }
+}
+
+@media (min-width: 1400px) and (max-width: 1599px) {
+    .big-text {
+        font-size: 100px;
+        line-height: 1.2;
+        font-weight: 900;
+        letter-spacing: -10px;
+    }
+
+    .our-story-area .story-bg-text {
+        font-size: 200px;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .giant-text {
+        font-size: 220px;
+        line-height: 0.8;
+        font-weight: 900;
+        letter-spacing: -6px;
+    }
+
+    h1,
+    .h1 {
+        line-height: 1.2;
+        font-size: 90px;
+        letter-spacing: -3px;
+    }
+
+    .hero-main-title {
+        line-height: 1.2;
+        font-size: 72px;
+        letter-spacing: -2px;
+    }
+
+    .hero-main-subinfo {
+        line-height: 1.32;
+        font-size: 24px;
+    }
+
+    h2,
+    .h2 {
+        line-height: 1.2;
+        font-size: 67px;
+        letter-spacing: -3px;
+    }
+
+    h3,
+    .h3 {
+        line-height: 1.2;
+        font-size: 51px;
+        letter-spacing: -2px;
+    }
+
+    h4,
+    .h4 {
+        line-height: 1.2;
+        font-size: 38px;
+        letter-spacing: -2px;
+    }
+
+    h5,
+    .h5 {
+        line-height: 1.32;
+        font-size: 28px;
+    }
+
+    h6,
+    .h6 {
+        line-height: 1.5;
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 1399px) {
+    .giant-text {
+        font-size: 168px;
+        line-height: 0.8;
+        font-weight: 900;
+        letter-spacing: -6px;
+    }
+
+    .big-text {
+        font-size: 90px;
+        line-height: 1.2;
+        font-weight: 900;
+        letter-spacing: -5px;
+    }
+
+    h1,
+    .h1 {
+        line-height: 1.2;
+        font-size: 67px;
+        letter-spacing: -3px;
+    }
+
+    .hero-main-title {
+        line-height: 1.2;
+        font-size: 62px;
+        letter-spacing: -2px;
+    }
+
+    .hero-main-subinfo {
+        line-height: 1.32;
+        font-size: 24px;
+    }
+
+    h2,
+    .h2 {
+        line-height: 1.2;
+        font-size: 51px;
+        letter-spacing: -2px;
+    }
+
+    h3,
+    .h3 {
+        line-height: 1.2;
+        font-size: 38px;
+        letter-spacing: -2px;
+    }
+
+    h4,
+    .h4 {
+        line-height: 1.32;
+        font-size: 34px;
+    }
+
+    h5,
+    .h5 {
+        line-height: 1.32;
+        font-size: 24px;
+    }
+
+    h6,
+    .h6 {
+        line-height: 1.5;
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 1199px) {
+    .giant-text {
+        font-size: 116px;
+        line-height: 0.8;
+        font-weight: 900;
+        letter-spacing: -6px;
+    }
+
+    .big-text {
+        font-size: 67px;
+        line-height: 1.2;
+        font-weight: 900;
+        letter-spacing: -3px;
+    }
+
+    h1,
+    .h1 {
+        line-height: 1.2;
+        font-size: 51px;
+        letter-spacing: -3px;
+    }
+
+    .hero-main-title {
+        line-height: 1.2;
+        font-size: 56px;
+        letter-spacing: -2px;
+    }
+
+    .hero-main-subinfo {
+        line-height: 1.32;
+        font-size: 22px;
+    }
+
+    h2,
+    .h2 {
+        line-height: 1.2;
+        font-size: 46px;
+        letter-spacing: -2px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .big-text {
+        font-size: 51px;
+        line-height: 1.2;
+        font-weight: 900;
+        letter-spacing: -3px;
+    }
+
+    h1,
+    .h1 {
+        line-height: 1.2;
+        font-size: 46px;
+        letter-spacing: -2px;
+        /* text-shadow: unset; */
+    }
+
+    .hero-main-title {
+        line-height: 1.2;
+        font-size: 52px;
+        letter-spacing: -2px;
+    }
+
+    .hero-main-subinfo {
+        line-height: 1.32;
+        font-size: 20px;
+    }
+
+    h2,
+    .h2 {
+        line-height: 1.2;
+        font-size: 38px;
+        letter-spacing: -2px;
+        /* text-shadow: unset; */
+    }
+
+    .light-mode h1,
+    .light-mode .h1,
+    .light-mode h2,
+    .light-mode .h2 {
+        /* text-shadow: unset; */
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .giant-text {
+        font-size: 100px;
+        line-height: 0.8;
+        font-weight: 900;
+        letter-spacing: -6px;
+    }
+
+    h1,
+    .h1 {
+        line-height: 1.2;
+        font-size: 42px;
+        letter-spacing: -2px;
+    }
+
+    .hero-main-title {
+        line-height: 1.2;
+        font-size: 42px;
+        letter-spacing: -2px;
+    }
+
+    .hero-main-subinfo {
+        line-height: 1.32;
+        font-size: 18px;
+    }
+
+    h2,
+    .h2 {
+        line-height: 1.2;
+        font-size: 32px;
+        letter-spacing: -2px;
+    }
+
+    h3,
+    .h3 {
+        line-height: 1.32;
+        font-size: 30px;
+    }
+
+    h4,
+    .h4 {
+        line-height: 1.5;
+        font-size: 26px;
+    }
+
+    h5,
+    .h5 {
+        line-height: 1.5;
+        font-size: 22px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .giant-text {
+        font-size: 67px;
+        line-height: 0.8;
+        font-weight: 900;
+        letter-spacing: -6px;
+    }
+}
