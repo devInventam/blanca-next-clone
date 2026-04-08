@@ -1,6 +1,6 @@
 "use client";
 
-import PrivacyPolicy from "../../src/screens/PrivacyPolicy";
+import PrivacyPolicy from "../../../screens/PrivacyPolicy";
 
 export default function Page() {
   return <PrivacyPolicy />;

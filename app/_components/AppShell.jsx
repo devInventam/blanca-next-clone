@@ -1,11 +1,11 @@
 "use client";
 
-import LiquidFilters from "../../src/components/common/LiquidFilters";
-import FloatingContactButtons from "../../src/components/common/FloatingContactButtons/FloatingContactButtons";
-import ContactModal from "../../src/components/common/ContactModal/ContactModal";
-import CookieConsent from "../../src/components/common/CookieConsent/CookieConsent";
-import GlobalSEO from "../../src/components/common/Seo/GlobalSEO";
-import ScrollToTopOnRouteChange from "../../src/components/common/ScrollToTopOnRouteChange";
+import LiquidFilters from "../../components/common/LiquidFilters";
+import FloatingContactButtons from "../../components/common/FloatingContactButtons/FloatingContactButtons";
+import ContactModal from "../../components/common/ContactModal/ContactModal";
+import CookieConsent from "../../components/common/CookieConsent/CookieConsent";
+import GlobalSEO from "../../components/common/Seo/GlobalSEO";
+import ScrollToTopOnRouteChange from "../../components/common/ScrollToTopOnRouteChange";
 
 export default function AppShell({ children }) {
   return (

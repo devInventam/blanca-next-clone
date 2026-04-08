@@ -1,6 +1,6 @@
 "use client";
 
-import TermsAndConditions from "../../src/screens/TermsConditions";
+import TermsAndConditions from "../../../screens/TermsConditions";
 
 export default function Page() {
   return <TermsAndConditions />;

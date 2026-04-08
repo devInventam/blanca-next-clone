@@ -1,10 +1,10 @@
 import { Suspense } from "react";
-import Projects from "../../src/screens/Projects";
+import Registration from "../../../screens/Registration";
 
 export default function Page() {
   return (
     <Suspense fallback={null}>
-      <Projects />
+      <Registration />
     </Suspense>
   );
 }

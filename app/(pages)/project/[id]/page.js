@@ -1,6 +1,6 @@
 "use client";
 
-import ProjectDetails from "../../../src/screens/ProjectDetails";
+import ProjectDetails from "../../../../screens/ProjectDetails";
 
 export default function Page() {
   return <ProjectDetails />;

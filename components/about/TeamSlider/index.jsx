@@ -48,7 +48,7 @@ const TeamSlider = ({ items }) => {
     // Helper to resolve image paths (similar to JourneySection if needed, but here we'll assume relative to public or src)
     const getImagePath = (imagePath) => {
         if (!imagePath) return "";
-        // If it starts with assets, it might be in src/assets
+        // If it starts with assets, it might be in assets
         if (imagePath.startsWith("assets/")) {
             return new URL(`../../../${imagePath}`, import.meta.url).href;
         }

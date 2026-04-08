@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { HelmetProvider } from "react-helmet-async";
-import { ContactModalProvider } from "../src/context/ContactModalContext";
+import { ContactModalProvider } from "../context/ContactModalContext";
 
 export default function Providers({ children }) {
   const [queryClient] = useState(() => new QueryClient());

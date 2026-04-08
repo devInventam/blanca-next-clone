@@ -1,6 +1,6 @@
 "use client";
 
-import Careers from "../../src/screens/Careers";
+import Careers from "../../../screens/Careers";
 
 export default function Page() {
   return <Careers />;
