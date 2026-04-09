@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useEffect, useRef } from "react";
 import "./ProjectDetails.css";
 import MainHeroBanner from "../../components/common/MainHeroBanner";
@@ -19,8 +21,6 @@ import { enquirySchema } from "../../schema/validationSchema";
 import { Icon } from "@iconify/react";
 import { useContactModal } from "../../context/ContactModalContext";
 import ThankYouModal from "../../components/common/ThankYouModal/ThankYouModal";
-import SEO from "../../components/common/Seo/Seo";
-// import SEO from "../../components/common/Seo/Seo";
 // const commercial1 = "/images/project-details/commercial-office-1.png";
 // const commercial2 = "/images/project-details/commercial-office-2.png";
 // const commercial3 = "/images/project-details/commercial-office-3.png";
@@ -128,18 +128,6 @@ const ProjectDetails = () => {
 
   return (
     <>
-      <SEO
-        title={
-          project?.project_meta_title ||
-          `${project?.project_name} - Blanca Real Estate`
-        }
-        description={
-          project?.project_meta_description ||
-          project?.project_overview_description
-        }
-        image={project?.project_card_image}
-        url={`/project/${project?.project_project_id}`}
-      />
       <main>
         <MainHeroBanner
           videoSrc={project?.project_banner_image}
