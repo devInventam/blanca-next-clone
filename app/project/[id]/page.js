@@ -4,10 +4,12 @@ import { getProjectById } from "@/services/projectService";
 import {
   DEFAULT_META_DESCRIPTION,
   DEFAULT_META_TITLE,
+  HOME_PAGE_URL,
 } from "@/utils/constant";
 
 export async function generateMetadata({ params }) {
   const { id } = await params;
+  const BASE_URL = HOME_PAGE_URL;
 
   let fallbackTitle = DEFAULT_META_TITLE;
   let fallbackDescription = DEFAULT_META_DESCRIPTION;
@@ -51,12 +53,16 @@ export async function generateMetadata({ params }) {
         description,
         images,
         type: "website",
+        url: `${BASE_URL}/project/${id}`,
       },
       twitter: {
         card: "summary_large_image",
         title,
         description,
         images,
+      },
+      alternates: {
+        canonical: `${BASE_URL}/project/${id}`,
       },
     };
   } catch {
@@ -67,6 +73,15 @@ export async function generateMetadata({ params }) {
   }
 }
 
-export default function Page() {
-  return <ProjectDetails />;
+export default async function Page({ params }) {
+  const { id } = await params;
+  
+  const projectResponse = await getProjectById(id);
+  const project = projectResponse?.data || null;
+
+  if(!projectResponse?.data) {
+    return "Project not found";
+  }
+
+  return <ProjectDetails project={project} />;
 }

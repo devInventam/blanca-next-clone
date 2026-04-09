@@ -33,15 +33,11 @@ const defaultValues = {
   message: "",
 };
 
-const ProjectDetails = () => {
+const ProjectDetails = ({ project }) => {
   const { openContactModal } = useContactModal();
-  const { id } = useParams();
   const enquiryRef = useRef(null);
   const [showThankYou, setShowThankYou] = React.useState(false);
-  const { data, isLoading, error } = useProjectById(id);
   const { mutate, isPending } = useEnquire();
-
-  const project = data?.data;
 
   const {
     control,
@@ -63,19 +59,19 @@ const ProjectDetails = () => {
       });
     }, 0);
     return () => window.clearTimeout(t);
-  }, [isLoading]);
+  }, []);
 
-  if (isLoading) {
-    return (
-      <AnimatePresence>
-        <Preloader key="preloader" isLoading={isLoading} />
-      </AnimatePresence>
-    );
-  }
+  // if (isLoading) {
+  //   return (
+  //     <AnimatePresence>
+  //       <Preloader key="preloader" isLoading={isLoading} />
+  //     </AnimatePresence>
+  //   );
+  // }
 
-  if (error) {
-    return <p>Something went wrong</p>;
-  }
+  // if (error) {
+  //   return <p>Something went wrong</p>;
+  // }
 
   //   const overviewData = [
   //     {
