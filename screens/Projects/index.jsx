@@ -1,8 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { useSearchParams, useRouter } from "next/navigation";
-import Header from "../../components/layout/Header/Header";
-import Footer from "../../components/layout/Footer/Footer";
 import SmallHeroBanner from "../../components/common/Small-hero-banner";
 import "./Projects.css";
 import ThemeBtn from "../../components/common/Button/ThemeBtn";
@@ -214,7 +212,6 @@ const Projects = () => {
       <AnimatePresence>
         {isLoading && <Preloader key="preloader" isLoading={isLoading} />}
       </AnimatePresence>
-      <Header />
       <main>
         <SmallHeroBanner
           title="Our Projects"
@@ -423,7 +420,6 @@ const Projects = () => {
           </Container>
         </div>
       </main>
-      <Footer />
     </div>
   );
 };

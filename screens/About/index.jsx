@@ -1,8 +1,6 @@
- "use client";
+"use client";
 
 import React, { useState, useEffect } from "react";
-import Header from '../../components/layout/Header/Header';
-import Footer from '../../components/layout/Footer/Footer';
 import Preloader from '../../components/common/Preloader';
 import ScrollToTop from '../../components/common/ScrollToTop';
 import AboutHero from '../../components/about/AboutHero';
@@ -94,7 +92,6 @@ const About = ({ aboutPageResponse, settingResponse, journeyResponse }) => {
             <AnimatePresence>
                 {isLoading && <Preloader key="preloader" isLoading={isLoading} />}
             </AnimatePresence>
-            <Header />
             <main>
                 <AboutHero messages={heroMessages} settingResponse={settingResponse} />
                 <AboutSection />
@@ -105,7 +102,6 @@ const About = ({ aboutPageResponse, settingResponse, journeyResponse }) => {
                 <TeamSlider items={teamItems} />
                 <ShowcaseSection slides={showcaseSlides} />
             </main>
-            <Footer />
             <ScrollToTop />
         </div>
     );

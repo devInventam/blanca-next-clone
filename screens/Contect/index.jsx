@@ -1,8 +1,6 @@
 import React, { useState, useEffect, useMemo } from "react";
 import Link from "next/link";
 import { Container, Row, Col, Form } from "react-bootstrap";
-import Header from "../../components/layout/Header/Header";
-import Footer from "../../components/layout/Footer/Footer";
 import { motion, AnimatePresence } from "framer-motion";
 import Preloader from "../../components/common/Preloader";
 import ScrollToTop from "../../components/common/ScrollToTop";
@@ -164,7 +162,6 @@ const Contact = () => {
       <AnimatePresence>
         {isLoading && <Preloader key="preloader" isLoading={isLoading} />}
       </AnimatePresence>
-      <Header />
       <main>
         <SmallHeroBanner
           title="Contact Us"
@@ -469,7 +466,6 @@ const Contact = () => {
           </Container>
         </div>
       </main>
-      <Footer />
       <ScrollToTop />
       <ThankYouModal
         isOpen={showThankYou}
