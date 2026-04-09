@@ -1,42 +1,29 @@
-import React, { lazy, Suspense, useMemo } from 'react';
+"use client";
+
+import React from 'react';
+import dynamic from 'next/dynamic';
+
 import Header from '../../components/layout/Header/Header';
 import Footer from '../../components/layout/Footer/Footer';
 import ScrollToTop from '../../components/common/ScrollToTop';
 import MainHeroBanner from '../../components/common/MainHeroBanner';
-import { useProjects } from '../../hooks/useProjects';
 import { PROJECT_STATUS_LABELS } from '../../utils/constant';
-import { AnimatePresence } from 'framer-motion';
-import Preloader from '../../components/common/Preloader';
-// import SEO from '../../components/common/Seo/Seo';
 
-const Hero = lazy(() => import('../../components/home/Hero'));
-const About = lazy(() => import('../../components/home/About'));
-const Properties = lazy(() => import('../../components/home/Properties'));
-const Testimonials = lazy(() => import('../../components/home/Testimonials'));
-const WhyChooseUs = lazy(() => import('../../components/home/WhyChooseUs'));
+const Hero = dynamic(() => import('../../components/home/Hero'), { ssr: false });
+const About = dynamic(() => import('../../components/home/About'), { ssr: false });
+const Properties = dynamic(() => import('../../components/home/Properties'), { ssr: false });
+const Testimonials = dynamic(() => import('../../components/home/Testimonials'), { ssr: false });
+const WhyChooseUs = dynamic(() => import('../../components/home/WhyChooseUs'), { ssr: false });
 
-const Home = () => {
-    const { data, isLoading } = useProjects({
-        page: 1,
-        limit: 5, 
-        sort_column: 'project_home_sequence',
-        sort_order: 'asc',
-        show_on_home_page: true,
-    });
-
-    const projects = data?.data || [];
+const Home = ({ projectsResponse }) => {
+    const projects = projectsResponse?.data || [];
 
     return (
         <div className="home-page">
-            {/* <SEO /> */}
-            <AnimatePresence>
-                {isLoading && <Preloader key="preloader" isLoading={isLoading} />}
-            </AnimatePresence>
             <Header />
 
             <main>
-               
-                {projects.length > 0 ? (
+                {projects?.length > 0 ? (
                     projects?.map((project) => (
                         <MainHeroBanner
                             key={project?.project_project_id}
@@ -58,14 +45,11 @@ const Home = () => {
                     <div style={{ height: '100vh', background: '#111' }} />
                 )}
 
-                
-                <Suspense fallback={<div />}>
-                    <Hero />
-                    <About />
-                    <Properties />
-                    <WhyChooseUs />
-                    <Testimonials />
-                </Suspense>
+                <Hero />
+                <About />
+                <Properties />
+                <WhyChooseUs />
+                <Testimonials />
             </main>
 
             <Footer />
