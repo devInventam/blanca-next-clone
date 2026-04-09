@@ -96,6 +96,12 @@
     transition: all 250ms ease;
     overflow: hidden;
     isolation: isolate;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: inherit;
 }
 
 .header-link :is(a, button.channel-partner-btn)::before {
@@ -359,15 +365,21 @@
     letter-spacing: 0.5px;
 }
 
-.glass-header .main-menu .navbar-collapse li a {
+.glass-header .main-menu .navbar-collapse li :is(a, button.channel-partner-btn) {
     border-radius: 999px;
     padding: 8px 14px;
     -webkit-transition: all 250ms ease;
     -o-transition: all 250ms ease;
     transition: all 250ms ease;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: inherit;
 }
 
-.glass-header .main-menu .navbar-collapse li a:hover {
+.glass-header .main-menu .navbar-collapse li :is(a, button.channel-partner-btn):hover {
     color: white;
     background: rgba(255, 255, 255, 0.12);
 }
