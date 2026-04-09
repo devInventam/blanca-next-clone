@@ -1,0 +1,147 @@
+/* Target the custom Modal's content when it contains our contact form */
+.contact-modal-inner {
+    width: 100%;
+}
+
+/* Override the default glass-card background for a more premium dark feel */
+.common-modal-overlay .modal-content {
+    background: rgba(0, 0, 0, 0.8) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    border-radius: 20px !important;
+}
+
+.common-modal-overlay .modal-content::before {
+    content: "";
+    position: absolute;
+    inset: -10px;
+    background: radial-gradient(circle at 30% 20%, rgb(255 255 255 / 8%), rgba(255, 255, 255, 0) 55%), radial-gradient(circle at 80% 80%, rgb(243 237 237 / 10%), rgba(0, 0, 0, 0) 60%), radial-gradient(circle, rgb(229 237 232 / 5%), rgb(249 244 244 / 0%) 55%);
+    opacity: 0.9;
+    pointer-events: none;
+}
+
+.common-modal-overlay .modal-content::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    box-shadow: inset 1px 1px 0 var(--lg-highlight), inset 0 0 5px var(--lg-highlight);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.modal-header-custom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.title-with-blue-bar {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.title-with-blue-bar .blue-bar {
+    width: 4px;
+    height: 30px;
+    background-color: #007bff;
+    display: block;
+    border-radius: 2px;
+}
+
+.title-with-blue-bar h2 {
+    color: #fff;
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    margin: 0;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.close-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: none;
+    color: #888;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.15);
+    transform: rotate(90deg);
+}
+
+.contact-modal-form .form-label {
+    color: #888;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+/* Form Styles */
+.contact-modal-form .glass-input-wrapper {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}
+
+.privacy-link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.privacy-link:hover {
+    text-decoration: underline;
+}
+
+.modal-submit-container {
+    display: flex;
+    justify-content: center;
+    /* margin-top: 35px; */
+}
+
+.modal-submit-btn {
+    background: #fff;
+    color: #000;
+    border: none;
+    padding: 14px 60px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.modal-submit-btn:hover {
+    background: #007bff;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 123, 255, 0.3);
+}
+
+@media (max-width: 576px) {
+    .title-with-blue-bar h2 {
+        font-size: 22px;
+    }
+
+    .modal-submit-btn {
+        width: 100%;
+        padding: 12px 30px;
+    }
+}

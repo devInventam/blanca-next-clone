@@ -1,0 +1,127 @@
+/* Floating Contact Buttons */
+.floating-action-buttons {
+    position: fixed;
+    right: -24px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 9999;
+}
+
+.floating-action-buttons .fab-item {
+    width: 100px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: var(--lg-text);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 6px 6px, rgba(0, 0, 0, 0.1) 0px 0px 20px;
+    backdrop-filter: blur(4px);
+    position: relative;
+    isolation: isolate;
+    padding: 0px 30px;
+    border-radius: 999px;
+    border: 1px solid var(--lg-highlight);
+    transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s, border-color 0.2s, backdrop-filter 0.4s;
+    overflow: hidden;
+}
+
+.floating-action-buttons .fab-item svg {
+    font-size: 22px;
+}
+
+/* .floating-action-buttons .fab-item:hover,
+.floating-action-buttons .fab-item:focus-visible {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.35),
+        inset 0 1px 2px rgba(255, 255, 255, 0.45);
+    border-color: rgba(255, 255, 255, 0.5);
+    opacity: 0.98;
+} */
+
+.floating-action-buttons .fab-call {
+    --fab-accent-rgb: 255, 255, 255;
+}
+
+.floating-action-buttons .fab-whatsapp {
+    --fab-accent-rgb: 37, 211, 102;
+}
+
+.floating-action-buttons .fab-inquiry {
+    --fab-accent-rgb: 242, 195, 137;
+}
+
+.floating-action-buttons .fab-item::before {
+    content: "";
+    position: absolute;
+    opacity: 0.9;
+    pointer-events: none;
+    inset: -10px;
+    background: radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0) 55%), radial-gradient(circle at 80% 80%, rgba(243, 237, 237, 0.1), rgba(0, 0, 0, 0) 60%), radial-gradient(circle, rgba(229, 237, 232, 0.05), rgba(249, 244, 244, 0) 55%);
+}
+
+.floating-action-buttons .fab-item::after {
+    content: "";
+    position: absolute;
+    box-shadow: inset 1px 1px 0 var(--lg-highlight), inset 0 0 5px var(--lg-highlight);
+    pointer-events: none;
+    z-index: 1;
+    inset: 0px;
+    border-radius: inherit;
+}
+
+.floating-action-buttons .fab-item:hover::before,
+.floating-action-buttons .fab-item:focus-visible::before {
+    background: linear-gradient(135deg,
+            rgba(255, 255, 255, 0.1) 0%,
+            rgba(255, 255, 255, 0.05) 50%,
+            rgba(255, 255, 255, 0.1) 100%);
+    background-size: 200% 200%;
+    animation: liquidFlow 3s ease-in-out infinite;
+    opacity: 0.7;
+}
+
+@keyframes liquidFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.floating-action-buttons .fab-item:hover::after,
+.floating-action-buttons .fab-item:focus-visible::after {
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.4),
+        inset 0 -1px 0 rgba(255, 255, 255, 0.1),
+        inset 1px 0 0 rgba(255, 255, 255, 0.2),
+        inset -1px 0 0 rgba(255, 255, 255, 0.1),
+        0 0 30px rgba(255, 255, 255, 0.1),
+        inset 0 0 20px rgba(255, 255, 255, 0.05);
+}
+
+.floating-action-buttons .fab-item i {
+    font-size: 20px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+}
+
+@media only screen and (max-width: 768px) {
+    .floating-action-buttons {
+        right: 8px;
+    }
+
+    .floating-action-buttons .fab-item {
+        width: 46px;
+        height: 46px;
+        padding: 0;
+        justify-content: center;
+    }
+}

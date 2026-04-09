@@ -1,0 +1,13 @@
+/* .form-group-new {
+    margin-bottom: 25px;
+} */
+
+.form-group-new label {
+    display: block;
+    color: #fff;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
