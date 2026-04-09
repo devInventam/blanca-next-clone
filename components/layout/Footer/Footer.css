@@ -440,6 +440,10 @@
     animation-delay: 1s;
 }
 
+.footer-links li:nth-child(5) {
+    animation-delay: 1.1s;
+}
+
 @keyframes slideInLeft {
     from {
         opacity: 0;
