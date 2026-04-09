@@ -5,7 +5,6 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useRegisterChannelPartner } from '../../hooks/useChannelPartner';
 import Preloader from '../../components/common/Preloader';
-import Header from '../../components/layout/Header/Header';
 import ScrollToTop from '../../components/common/ScrollToTop';
 import SmallHeroBanner from '../../components/common/Small-hero-banner';
 import ThankYouModal from "../../components/common/ThankYouModal/ThankYouModal";
@@ -13,7 +12,6 @@ import IndividualForm from "./IndividualForm";
 import AgencyForm from "./AgencyForm";
 import { channelPartnerSchema } from '../../schema/validationSchema';
 import "./ragistration.css";
-import Footer from '../../components/layout/Footer/Footer';
 // import SEO from '../../components/common/Seo/Seo';
 
 const RegistrationBg = "/images/background/registration-bg.png";
@@ -153,7 +151,6 @@ const Registration = () => {
         <div className="registration-page">
             {/* <SEO /> */}
             <Preloader />
-            <Header />
             <main>
                 <SmallHeroBanner title="Channel Partner Registration" description="" image={RegistrationBg} showBackButton={true} />
 
@@ -228,7 +225,6 @@ const Registration = () => {
                     </Container>
                 </section>
             </main>
-            <Footer />
             <ScrollToTop />
             <ThankYouModal
                 isOpen={showThankYou}

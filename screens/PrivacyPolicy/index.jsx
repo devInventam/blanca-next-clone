@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Header from "../../components/layout/Header/Header";
-import Footer from "../../components/layout/Footer/Footer";
 import Preloader from "../../components/common/Preloader";
 import ScrollToTop from "../../components/common/ScrollToTop";
 import SmallHeroBanner from "../../components/common/Small-hero-banner";
@@ -34,7 +32,6 @@ const PrivacyPolicy = () => {
       <AnimatePresence>
         {isLoading && <Preloader key="preloader" isLoading={isLoading} />}
       </AnimatePresence>
-      <Header />
       <main>
         <SmallHeroBanner
           title="Privacy Policy"
@@ -273,7 +270,6 @@ const PrivacyPolicy = () => {
           </Container>
         </section>
       </main>
-      <Footer />
       <ScrollToTop />
     </div>
   );

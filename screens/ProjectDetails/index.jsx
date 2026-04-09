@@ -1,7 +1,5 @@
 import React, { useEffect, useRef } from "react";
 import "./ProjectDetails.css";
-import Header from "../../components/layout/Header/Header";
-import Footer from "../../components/layout/Footer/Footer";
 import MainHeroBanner from "../../components/common/MainHeroBanner";
 import { Container, Row, Col, Form } from "react-bootstrap";
 import Slider from "react-slick";
@@ -142,7 +140,6 @@ const ProjectDetails = () => {
         image={project?.project_card_image}
         url={`/project/${project?.project_project_id}`}
       />
-      <Header />
       <main>
         <MainHeroBanner
           videoSrc={project?.project_banner_image}
@@ -509,7 +506,6 @@ const ProjectDetails = () => {
           </Container>
         </section>
       </main>
-      <Footer />
 
       <ThankYouModal
         isOpen={showThankYou}

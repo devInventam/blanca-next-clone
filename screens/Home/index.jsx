@@ -3,8 +3,6 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
 
-import Header from '../../components/layout/Header/Header';
-import Footer from '../../components/layout/Footer/Footer';
 import ScrollToTop from '../../components/common/ScrollToTop';
 import MainHeroBanner from '../../components/common/MainHeroBanner';
 import { PROJECT_STATUS_LABELS } from '../../utils/constant';
@@ -20,8 +18,6 @@ const Home = ({ projectsResponse }) => {
 
     return (
         <div className="home-page">
-            <Header />
-
             <main>
                 {projects?.length > 0 ? (
                     projects?.map((project) => (
@@ -52,7 +48,6 @@ const Home = ({ projectsResponse }) => {
                 <Testimonials />
             </main>
 
-            <Footer />
             <ScrollToTop />
         </div>
     );

@@ -2,6 +2,8 @@ import "./globals.css";
 
 import Providers from "./providers";
 import AppShell from "./AppShell";
+import Header from "@/components/layout/Header/Header";
+import Footer from "@/components/layout/Footer/Footer";
 
 /** Client-heavy UI (maps, sliders, jQuery, etc.); avoid static prerender issues. */
 export const dynamic = "force-dynamic";
@@ -53,7 +55,11 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         <Providers>
-          <AppShell>{children}</AppShell>
+          <AppShell>
+            <Header />
+            {children}
+            <Footer />
+          </AppShell>
         </Providers>
       </body>
     </html>
