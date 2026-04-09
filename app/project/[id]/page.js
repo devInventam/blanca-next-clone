@@ -7,7 +7,7 @@ import {
 } from "@/utils/constant";
 
 export async function generateMetadata({ params }) {
-  const id = params?.id;
+  const { id } = await params;
 
   let fallbackTitle = DEFAULT_META_TITLE;
   let fallbackDescription = DEFAULT_META_DESCRIPTION;
