@@ -98,6 +98,7 @@
     transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease, border-color 0.2s ease, backdrop-filter 0.4s ease;
     overflow: hidden;
     isolation: isolate;
+    position: relative;
 }
 
 .gallery-prev::after,
@@ -123,9 +124,15 @@
 
 .gallery-prev:hover,
 .gallery-next:hover {
-    background: #fff !important;
-    color: #000 !important;
-    border-color: #fff !important;
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.4) !important;
+    background: rgba(255, 255, 255, 0.12) !important;
+    color: #fff !important;
+}
+
+.gallery-prev:active,
+.gallery-next:active {
+    transform: translateY(1px) scale(0.98);
 }
 
 /* Thumbnails */

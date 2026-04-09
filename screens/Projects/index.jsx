@@ -27,6 +27,11 @@ const Projects = () => {
   const [view, setView] = useState("grid");
   const [activeDropdown, setActiveDropdown] = useState(null); // 'type' or 'status' or null
   const [activeProjectId, setActiveProjectId] = useState(null);
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   // const filteredProjects = projectsData.filter((project) => {
   //   const matchesType =
@@ -134,9 +139,9 @@ const Projects = () => {
 
     return [
       { label: "All Projects", value: "all" },
-      ...(categoryOptions.length ? categoryOptions : fallback),
+      ...(isMounted && categoryOptions.length ? categoryOptions : fallback),
     ];
-  }, [categoryResponse]);
+  }, [categoryResponse, isMounted]);
   // ... rest of the file
 
   const statusOptions = [
@@ -150,10 +155,12 @@ const Projects = () => {
 
   const apiLocations = locationData?.data;
   const locationList = Array.isArray(apiLocations) ? apiLocations : [];
-  const areaOptions = [
+  const areaOptions = React.useMemo(() => [
     { label: "All Areas", value: "all" },
-    ...locationList.map((loc) => ({ label: String(loc), value: String(loc) })),
-  ];
+    ...(isMounted
+      ? locationList.map((loc) => ({ label: String(loc), value: String(loc) }))
+      : []),
+  ], [locationList, isMounted]);
 
   // Handle click outside to close dropdowns
   useEffect(() => {
@@ -351,7 +358,7 @@ const Projects = () => {
 
         <div className="projects-list-area">
           <Container>
-            {!hasProjects && (
+            {isMounted && !hasProjects && (
               <div className="text-center py-5">
                 <h3 className="text-white">
                   No projects found matching your criteria.
@@ -359,7 +366,7 @@ const Projects = () => {
               </div>
             )}
 
-            {hasProjects && view === "grid" && (
+            {isMounted && hasProjects && view === "grid" && (
               <div className="projects-grid">
                 {filteredProjects?.map((project) => (
                   <ProjectCard
@@ -371,7 +378,7 @@ const Projects = () => {
               </div>
             )}
 
-            {hasProjects && view === "map" && (
+            {isMounted && hasProjects && view === "map" && (
               <div className="map-view-container">
                 <div className="map-side-list">
                   {filteredProjects?.map((project) => (

@@ -260,6 +260,9 @@ const Footer = () => {
                   <li>
                     <Link href="/about">Journey of Innovation</Link>
                   </li>
+                  <li>
+                    <Link href="/contact">Contact Us</Link>
+                  </li>
                 </ul>
               </div>
 

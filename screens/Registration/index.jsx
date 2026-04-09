@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useMemo, useState, useEffect } from 'react';
 import { Container, Form, Button } from 'react-bootstrap';
 import { useSearchParams } from 'next/navigation';
