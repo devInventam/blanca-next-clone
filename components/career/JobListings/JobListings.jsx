@@ -10,9 +10,9 @@ import JobApplyModal from "../JobApplyModal/JobApplyModal";
 import Dropdown from "../../common/Dropdown/Dropdown";
 
 // 🔹 CHANGE: import API hooks
-import { useCareerCategories, useCareers } from "../../../hooks/useCareers";
+import { useCareerCategories } from "../../../hooks/useCareers";
 
-const JobListings = () => {
+const JobListings = ({ categoryData }) => {
     // 🔹 CHANGE: default value for API filtering
     const [activeTab, setActiveTab] = useState("all");
 
@@ -25,11 +25,8 @@ const JobListings = () => {
     const [selectedJob, setSelectedJob] = useState(null);
 
     // 🔹 CHANGE: fetch categories for dropdown
-    const { data: categoryData } = useCareerCategories({
-        page: 1,
-        limit: 10,
-        is_parent: true,
-    });
+
+    const categoryList = categoryData?.data
     
     // 🔹 CHANGE: fetch careers list
     const { data: careerData, isLoading } = useCareerCategories({
@@ -42,7 +39,7 @@ const JobListings = () => {
     // 🔹 CHANGE: prepare dropdown options
     const categories = [
         { label: "All Jobs", value: "all" },
-        ...(categoryData?.data || []).map((cat) => ({
+        ...(categoryList || []).map((cat) => ({
             label: cat.career_category_name,
             value: cat.career_category_career_category_id,
         })),

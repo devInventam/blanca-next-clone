@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState, useEffect, useMemo } from "react";
 import Link from "next/link";
 import { Container, Row, Col, Form } from "react-bootstrap";
@@ -19,7 +21,6 @@ import PhoneInput from "../../components/common/PhoneInput/PhoneInput";
 import { Country } from "country-state-city";
 import { useContactUs } from "../../hooks/useContactUs";
 import { contactSchema } from "../../schema/validationSchema";
-import { useSetting } from "../../hooks/useSetting";
 // import SEO from '../../components/common/Seo/Seo';
 
 const contactBg = "/images/background/contect-us.png";
@@ -45,11 +46,10 @@ const FALLBACK_CONTACT_NUMBERS = [
 const FALLBACK_CONTACT_ADDRESS =
   "Greenland CHS 16 Plot 20 Sector 40 Nerul Seawood, Navi Mumbai, 400706.";
 
-const Contact = () => {
+const Contact = ({ settingResponse }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [showThankYou, setShowThankYou] = useState(false);
   const { mutate: sendContact, isPending } = useContactUs();
-  const { data: settingResponse } = useSetting();
 
   const settingRecord = useMemo(() => {
     return settingResponse?.data?.[0] || null;
@@ -343,6 +343,7 @@ const Contact = () => {
                               <div className="glass-input-wrapper overflow-visible">
                                 <Select
                                   {...field}
+                                  instanceId="contact-country-select"
                                   className="contact-country-select"
                                   classNamePrefix="contact-country-select"
                                   options={countryOptions}
