@@ -1,5 +1,19 @@
 import Home from "@/screens/Home";
 import { getProjects } from "@/services/projectService";
+import { HOME_PAGE_URL } from "@/utils/constant";
+
+export async function generateMetadata() {
+  const BASE_URL = HOME_PAGE_URL;
+
+  return {
+    alternates: {
+      canonical: `${BASE_URL}`,
+    },
+    openGraph: {
+      url: `${BASE_URL}`,
+    },
+  };
+}
 
 export default async function Page() {
   const projectsResponse = await getProjects({

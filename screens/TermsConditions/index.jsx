@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState, useEffect } from "react";
 import Preloader from "../../components/common/Preloader";
 import ScrollToTop from "../../components/common/ScrollToTop";
