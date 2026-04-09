@@ -115,28 +115,28 @@ const Projects = () => {
     const list = categoryResponse?.data;
     const categoryOptions = Array.isArray(list)
       ? list
-          .map((item) => {
-            const label =
-              item?.category_name ??
-              item?.career_category_name ??
-              item?.name ??
-              item?.title ??
-              "";
-            const slug =
-              item?.category_slug ??
-              item?.career_category_slug ??
-              item?.slug ??
-              "";
+        .map((item) => {
+          const label =
+            item?.category_name ??
+            item?.career_category_name ??
+            item?.name ??
+            item?.title ??
+            "";
+          const slug =
+            item?.category_slug ??
+            item?.career_category_slug ??
+            item?.slug ??
+            "";
 
-            const normalizedLabel = String(label).trim();
-            const normalizedValue =
-              String(slug).trim() ||
-              normalizedLabel.toLowerCase().replace(/\s+/g, "-");
+          const normalizedLabel = String(label).trim();
+          const normalizedValue =
+            String(slug).trim() ||
+            normalizedLabel.toLowerCase().replace(/\s+/g, "-");
 
-            if (!normalizedLabel) return null;
-            return { label: normalizedLabel, value: normalizedValue };
-          })
-          .filter(Boolean)
+          if (!normalizedLabel) return null;
+          return { label: normalizedLabel, value: normalizedValue };
+        })
+        .filter(Boolean)
       : [];
 
     return [
@@ -335,18 +335,16 @@ const Projects = () => {
                   {/* ================= View Toggle ================= */}
                   <div className="view-toggles">
                     <ThemeBtn
-                      className={`view-toggle-btn ${
-                        view === "grid" ? "active" : ""
-                      }`}
+                      className={`view-toggle-btn ${view === "grid" ? "active" : ""
+                        }`}
                       onClick={() => setView("grid")}
                     >
                       GRID VIEW
                     </ThemeBtn>
 
                     <ThemeBtn
-                      className={`view-toggle-btn ${
-                        view === "map" ? "active" : ""
-                      }`}
+                      className={`view-toggle-btn ${view === "map" ? "active" : ""
+                        }`}
                       onClick={() => setView("map")}
                     >
                       MAP VIEW
