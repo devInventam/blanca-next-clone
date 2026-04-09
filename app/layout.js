@@ -45,9 +45,9 @@ export const dynamic = "force-dynamic";
         description: DESCRIPTION,
         images: [
           {
-            width: "1200",
-            height: "630",
-            url: "/images/logos/blanca-logo.png",
+            url: `${BASE_URL}/images/logos/blanca-logo.png`,
+            width: 1200,
+            height: 630,
           },
         ],
       },

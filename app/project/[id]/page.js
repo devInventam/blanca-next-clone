@@ -37,13 +37,11 @@ export async function generateMetadata({ params }) {
         : fallbackTitle);
 
     const description =
-      project?.project_meta_description ||
-      project?.project_overview_description ||
-      fallbackDescription;
+      project?.project_meta_description || fallbackDescription;
 
     const images = project?.project_card_image
       ? [project?.project_card_image]
-      : ["/images/logos/favicon.png"];
+      : [`${BASE_URL}/images/logos/favicon.png`];
 
     return {
       title,
