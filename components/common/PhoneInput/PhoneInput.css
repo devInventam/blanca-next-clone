@@ -1,0 +1,82 @@
+/* Phone Input */
+.phone-input-wrapper {
+    display: flex;
+    background-color: transparent;
+    border-radius: 5px;
+}
+
+.country-code {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 15px;
+    border-right: 1px solid var(--lg-highlight);
+    color: #ffffff;
+    cursor: pointer;
+    min-width: 80px;
+    position: relative;
+    z-index: 2;
+}
+
+.country-code img {
+    width: 20px;
+}
+
+.phone-input-wrapper .form-control-new {
+    border-radius: 0;
+}
+
+/* Country Dropdown Styles */
+.country-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 200px;
+    background: #1a1a1a;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    margin: 10px 0 0 0;
+    padding: 8px 0;
+    list-style: none;
+    display: none;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+    z-index: 9999;
+    max-height: 220px;
+    overflow-y: auto;
+}
+
+.country-dropdown.show {
+    display: block;
+}
+
+.country-dropdown li {
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #fff;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+.country-dropdown li:hover {
+    background: var(--lg-highlight);
+}
+
+.country-dropdown li img {
+    width: 20px;
+}
+
+/* Scrollbar styling for country list */
+.country-dropdown::-webkit-scrollbar {
+    width: 6px;
+}
+
+.country-dropdown::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.country-dropdown::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+}

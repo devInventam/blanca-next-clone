@@ -1,0 +1,416 @@
+/*-------Hero-area-2--------*/
+.hero-area-2 {
+    height: 100vh;
+    min-height: 100vh;
+}
+
+.hero-area-2 .hero-2-slider,
+.hero-area-2 .slick-list,
+.hero-area-2 .slick-track {
+    height: 100%;
+}
+
+.hero-2-item {
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    min-height: 100vh;
+    padding-top: 0;
+    padding-bottom: 0;
+    display: flex;
+    align-items: center;
+}
+
+.hero-area-2 .phone-title {
+    margin-bottom: 0;
+}
+
+.hero-area-2 .rotate {
+    transform: rotate(-90deg);
+    width: fit-content;
+}
+
+.light-mode .hero-area-2 .rotate {
+    color: var(--black-30);
+}
+
+.hero-area-2 .rotate.phone {
+    position: absolute;
+    left: 16px;
+    top: 43%;
+}
+
+.hero-area-2 .rotate.phone .number {
+    color: var(--primary-color);
+}
+
+.hero-area-2 .rotate.follow {
+    position: absolute;
+    right: 30px;
+    top: 50%;
+}
+
+.hero-area-2 .rotate i {
+    margin-top: 10px;
+    margin-right: 8px;
+    font-size: 32px;
+}
+
+.follow-line {
+    color: var(--black-30);
+    position: relative;
+}
+
+.hero-area-2 .follow-line:after {
+    content: '';
+    position: absolute;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    width: 64px;
+    height: 1px;
+    background: var(--black-30);
+    line-height: 1px;
+    left: 8px;
+    top: 13px;
+}
+
+.hero-area-2 .container-fluid {
+    padding: 0 40px;
+    height: 100%;
+}
+
+.hero-area-2 .container-fluid .row {
+    min-height: 100%;
+    align-items: center !important;
+}
+
+/* .hero-area-2 .container-fluid .row>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100%;
+    width: 100%;
+    padding-top: 64px;
+    padding-bottom: 64px;
+    height: 100vh;
+} */
+
+.hero-area-2 .buttons {
+    margin-top: auto;
+    margin-bottom: 0;
+    margin-top: auto !important;
+}
+
+.hero-area-2 .buttons.mt-96 {
+    margin-top: auto !important;
+}
+
+.hero-area-2 .buttons a:not(:first-child) {
+    margin-left: 15px;
+}
+
+.hero-area-2 .buttons {
+    cursor: pointer !important;
+}
+
+.hero-area-2 .buttons .theme-btn {
+    cursor: pointer !important;
+}
+
+.hero-area-2 .slick-dots:before {
+    content: '';
+    position: absolute;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    width: 64px;
+    height: 1px;
+    background: var(--black-30);
+    line-height: 1px;
+    top: 14px;
+    margin-right: 32px;
+    left: 0;
+}
+
+.hero-area-2 .slick-dots {
+    padding-left: 96px;
+    width: fit-content;
+    position: absolute;
+    bottom: 87px;
+    left: 16%;
+    z-index: 2;
+}
+
+.hero-area-2 .slick-dots:after {
+    content: '';
+    position: absolute;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    width: 64px;
+    height: 1px;
+    background: var(--black-30);
+    line-height: 1px;
+    top: 14px;
+    margin-left: 32px;
+}
+
+.hero-area-2 .slick-dots li {
+    display: inline;
+}
+
+.hero-area-2 button.prev {
+    position: absolute;
+    right: calc(16% + 44px);
+    bottom: 96px;
+    z-index: 2;
+}
+
+.hero-area-2 button.next {
+    position: absolute;
+    right: 16%;
+    bottom: 96px;
+    z-index: 2;
+}
+
+.hero-area-2 .slick-dots li.slick-active button {
+    color: var(--primary-color);
+}
+
+.hero-area-2 .slick-dots li button {
+    background: unset;
+    color: var(--black-30);
+}
+
+.hero-area-2 .slick-dots li:not(:last-child) button {
+    margin-right: 10px;
+}
+
+/* Left Side Statistics Boxes - Mirror Finish Round Boxes */
+.hero-left-stats {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 32px;
+    align-items: flex-start;
+    justify-content: center;
+    align-self: center;
+    min-height: unset !important;
+    height: auto !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    pointer-events: none;
+    /* Allow clicks to pass through to the center */
+}
+
+.hero-left-stats>* {
+    pointer-events: auto;
+    /* Re-enable clicks for the actual badges */
+}
+
+/* Center content alignment */
+.hero-area-2 .container-fluid .row>div.col-lg-6 {
+    justify-content: center !important;
+    min-height: unset !important;
+    height: auto !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* StatBadge component handled via common StatBadge.css */
+
+.vision-title {
+    font-size: 68px;
+    letter-spacing: -2px;
+}
+
+.right-side-content {
+    margin-left: 130px;
+    width: calc(100% - 260px) !important;
+}
+
+/*Hero area 3*/
+.light-mode .hero-area-3 {
+    background: var(--black-10);
+}
+
+.light-mode .hero-area-3 .carousel-buttons button {
+    background: transparent;
+}
+
+/* Expertise Badge Styles */
+.hero-expert-badge {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    z-index: 10;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+
+    /* Liquid Glass Effect */
+    color: var(--lg-text);
+    border: 1px solid var(--lg-highlight);
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease, border-color 0.2s ease, backdrop-filter 0.4s ease;
+    overflow: hidden;
+    isolation: isolate;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    animation: badgeFloat 6s ease-in-out infinite;
+}
+
+/* Inner liquid shine */
+.hero-expert-badge::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, transparent 50%, rgba(255, 255, 255, 0.05) 100%);
+    pointer-events: none;
+}
+
+.badge-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.badge-year {
+    position: absolute;
+    font-family: var(--bs-font-playfair-display);
+    font-size: 52px;
+    font-weight: 700;
+    color: var(--heading-color);
+    z-index: 2;
+    margin-bottom: 20px;
+    /* text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  filter: url(#lg-dist); */
+}
+
+.badge-text-ring {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* animation: rotateText 20s linear infinite; */
+    z-index: 1;
+}
+
+/* Animations */
+@keyframes rotateText {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes badgeFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Responsive adjustment */
+@media only screen and (max-width: 991px) {
+    .hero-expert-badge {
+        top: 20px;
+        right: 20px;
+        width: 100px;
+        height: 100px;
+    }
+
+    .badge-year {
+        font-size: 36px;
+    }
+
+    .badge-text-ring text {
+        font-size: 12px;
+        /* visual adjustment for smaller scale */
+    }
+
+    .hero-left-stats {
+        display: none;
+    }
+
+    .hero-area-2 .phone,
+    .hero-area-2 .follow {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+
+    .hero-area-2 .slick-dots,
+    .hero-area-2 button.prev,
+    .hero-area-2 button.next,
+    .hero-area-2 h1 br {
+        display: none !important;
+    }
+
+    .hero-area-2 .buttons a:not(:first-child) {
+        margin-top: 15px;
+    }
+
+    .hero-2-item {
+        padding-top: 0;
+        height: 100vh;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .hero-left-stats {
+        padding: 0px;
+        position: absolute;
+        top: 20px;
+        bottom: 0px;
+        transform: translateY(0%);
+        left: 0;
+        gap: 12px;
+        z-index: 3;
+        display: flex !important;
+        flex-direction: row !important;
+        min-height: unset !important;
+        height: auto !important;
+        align-content: flex-start !important;
+        align-self: auto;
+    }
+
+    .hero-expert-badge {
+        position: absolute;
+        top: auto;
+        bottom: 25%;
+        right: auto;
+        left: auto;
+    }
+
+    .right-side-content {
+        margin-left: 0px;
+        width: 100% !important;
+    }
+}
