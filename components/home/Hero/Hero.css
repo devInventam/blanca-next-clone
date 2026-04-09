@@ -226,8 +226,18 @@
 /* StatBadge component handled via common StatBadge.css */
 
 .vision-title {
-    font-size: 68px;
+    font-size: 62px;
     letter-spacing: -2px;
+
+    @media (max-width: 992px) {
+        font-size: 48px;
+        letter-spacing: 0px;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 40px;
+        letter-spacing: 0px;
+    }
 }
 
 .right-side-content {

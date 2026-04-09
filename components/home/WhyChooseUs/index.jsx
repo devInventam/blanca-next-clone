@@ -66,9 +66,11 @@ const WhyChooseUs = () => {
       // If it's the current slide and we are animating, it moves out
       const transform =
         isAnimating && isCurrent ? "translateY(100%)" : "translateY(0)";
-      const transition = isAnimating
-        ? "transform 0.8s cubic-bezier(0.7, 0, 0.3, 1)"
-        : "none";
+      const transitionProperty = isAnimating ? "transform" : "none";
+      const transitionDuration = isAnimating ? "0.8s" : "0s";
+      const transitionTimingFunction = isAnimating
+        ? "cubic-bezier(0.7, 0, 0.3, 1)"
+        : "ease";
       const transitionDelay = isAnimating && isCurrent ? `${i * 0.08}s` : "0s";
 
       segments.push(
@@ -78,7 +80,9 @@ const WhyChooseUs = () => {
           style={{
             width: `${100 / segmentsPerSlide}%`,
             left: `${i * (100 / segmentsPerSlide)}%`,
-            transition,
+            transitionProperty,
+            transitionDuration,
+            transitionTimingFunction,
             transitionDelay,
             transform,
           }}
@@ -195,7 +199,7 @@ const WhyChooseUs = () => {
                             if (isAnimating && isCurrent) {
                               return {
                                 opacity: 0,
-                                transform: `skewX(15deg) translateY(${outY}px)`,
+                                transform: `skewX(var(--skew-angle)) translateY(${outY}px)`,
                                 transition:
                                   "transform 0.8s cubic-bezier(0.7, 0, 0.3, 1), opacity 0.4s ease",
                               };
@@ -205,14 +209,14 @@ const WhyChooseUs = () => {
                               if (!animateEnter) {
                                 return {
                                   opacity: 0,
-                                  transform: `skewX(15deg) translateY(${inY}px)`,
+                                  transform: `skewX(var(--skew-angle)) translateY(${inY}px)`,
                                   transition:
                                     "transform 0.8s cubic-bezier(0.7, 0, 0.3, 1), opacity 0.4s ease",
                                 };
                               }
                               return {
                                 opacity: 1,
-                                transform: "skewX(15deg) translateY(0)",
+                                transform: "skewX(var(--skew-angle)) translateY(0)",
                                 transition:
                                   "transform 0.8s cubic-bezier(0.7, 0, 0.3, 1), opacity 0.4s ease",
                               };
