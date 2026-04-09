@@ -1,9 +1,3 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-import "animate.css/animate.min.css";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import "@/assets/styles/index.css";
-import "@/assets/styles/App.css";
 import "./globals.css";
 
 import Providers from "./providers";
