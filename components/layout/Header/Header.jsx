@@ -298,11 +298,11 @@ const Header = () => {
                   </li>
 
                   <li
-                    className={`header-link has-submenu ${isCurrent("/", "#our-story")} ${activeSubmenu === "communities" ? "is-open" : ""}`}
+                    className={`header-link has-submenu ${isCurrent("/", "/projects")} ${activeSubmenu === "communities" ? "is-open" : ""}`}
                   >
                     <a
-                      href="#our-story"
-                      onClick={(e) => handleNavClick(e, "/", "communities")}
+                      href="/projects"
+                      onClick={(e) => handleNavClick(e, "/projects", "communities")}
                     >
                       Communities
                     </a>
@@ -458,7 +458,7 @@ const Header = () => {
                           }}
                         >
                           <li>
-                            <Link href="/about#about" onClick={closeMenus}>
+                            <Link href="/about" onClick={closeMenus}>
                               Legacy
                             </Link>
                           </li>
@@ -514,12 +514,12 @@ const Header = () => {
                         className={`dropdown ${isCurrent("/", "#our-story")} ${activeSubmenu === "mobile-communities" ? "open" : ""}`}
                       >
                         <a
-                          href="#our-story"
+                          href="/projects"
                           onClick={(e) => {
                             e.preventDefault();
                             toggleSubmenu("mobile-communities");
                             document
-                              .querySelector("#our-story")
+                              .querySelector("/projects")
                               ?.scrollIntoView({ behavior: "smooth" });
                           }}
                         >
