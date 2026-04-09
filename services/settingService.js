@@ -1,4 +1,4 @@
-import { axiosInstance } from "../api/axiosInstance";
+import { axiosInstance } from "./axiosInstance";
 
 export const getSetting = async (params) => {
   const { data } = await axiosInstance.get("/setting", {

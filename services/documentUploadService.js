@@ -1,4 +1,4 @@
-import { axiosInstance } from "../api/axiosInstance";
+import { axiosInstance } from "./axiosInstance";
 
 export const uploadDocument = async (file) => {
   const formData = new FormData();

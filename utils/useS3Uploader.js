@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { axiosInstance } from "../api/axiosInstance";
+import { axiosInstance } from "../services/axiosInstance";
 
 export const useS3Uploader = () => {
   const [isLoading, setIsLoading] = useState(false);

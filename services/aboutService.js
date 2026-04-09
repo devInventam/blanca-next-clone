@@ -1,4 +1,4 @@
-import { axiosInstance } from "../api/axiosInstance";
+import { axiosInstance } from "./axiosInstance";
 
 export const getProjectByYearWithCategory = async () => {
   const { data } = await axiosInstance.get(

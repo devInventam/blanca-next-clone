@@ -4,7 +4,6 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import { motion as Montion } from "framer-motion";
 import StatBadge from "../../common/StatBadge";
 import "./abouthero.css";
-import { useSetting } from "../../../hooks/useSetting";
 
 
 // Register GSAP plugins
@@ -21,8 +20,7 @@ const DEFAULT_MESSAGES = [
   "Crafting Landmarks. Creating Confidence.",
 ];
 
-const HeroSection = ({ messages = [] }) => {
-  const { data: settingResponse } = useSetting();
+const HeroSection = ({ messages = [], settingResponse }) => {
   const yearsOfExpertise = new Date().getFullYear() - FOUNDING_YEAR;
   const [activeSlide, setActiveSlide] = useState(0);
   const [isLoopReset, setIsLoopReset] = useState(false);

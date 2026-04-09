@@ -1,3 +1,5 @@
+ "use client";
+
 import React, { useState, useEffect } from "react";
 import Header from '../../components/layout/Header/Header';
 import Footer from '../../components/layout/Footer/Footer';
@@ -12,12 +14,10 @@ import JourneySection from '../../components/about/JourneySection';
 import ShowcaseSection from "../../components/about/ShowcaseSection";
 import TeamSlider from '../../components/about/TeamSlider';
 import { AnimatePresence } from 'framer-motion';
-import { useOtherField } from "../../hooks/useOtherField";
 // import SEO from '../../components/common/Seo/Seo';
 
-const About = () => {
+const About = ({ aboutPageResponse, settingResponse, journeyResponse }) => {
     const [isLoading, setIsLoading] = useState(true);
-    const { data: aboutPageResponse } = useOtherField();
 
     useEffect(() => {
         // SPA route changes don't re-fire `window.load`, so relying on it can
@@ -96,12 +96,12 @@ const About = () => {
             </AnimatePresence>
             <Header />
             <main>
-                <AboutHero messages={heroMessages} />
+                <AboutHero messages={heroMessages} settingResponse={settingResponse} />
                 <AboutSection />
                 <AboutBlueprintSection />
                 <VisionSection />
                 <MissionSection />
-                <JourneySection />
+                <JourneySection journeyResponse={journeyResponse} />
                 <TeamSlider items={teamItems} />
                 <ShowcaseSection slides={showcaseSlides} />
             </main>

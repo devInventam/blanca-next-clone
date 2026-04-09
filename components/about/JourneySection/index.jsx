@@ -2,7 +2,6 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { useProjectByYearWithCategory } from '../../../hooks/useAbout';
 import './JourneySection.css';
 
 /** Module scope so `useMemo` callbacks always close over a defined function (avoids ReferenceError). */
@@ -12,14 +11,13 @@ const isCompletedStatus = (value) => {
     return s === "completed" || s === "complete";
 };
 
-const JourneySection = () => {
+const JourneySection = ({ journeyResponse }) => {
     const scrollRef = React.useRef(null);
     const segmentRef = React.useRef(null);
     const segmentWidthRef = React.useRef(0);
     const [isDragging, setIsDragging] = React.useState(false);
     const [startX, setStartX] = React.useState(0);
     const [scrollLeft, setScrollLeft] = React.useState(0);
-    const { data: journeyResponse } = useProjectByYearWithCategory();
 
     /** Ribbon: only "Ongoing" / "Upcoming" show before the year; all other statuses → year only */
     const getRibbonStatusLabel = (status) => {
