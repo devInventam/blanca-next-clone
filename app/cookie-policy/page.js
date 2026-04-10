@@ -3,6 +3,7 @@ import { HOME_PAGE_URL } from "@/utils/constant";
 import { getGlobalSeo } from "@/utils/getGlobalSeo";
 
 export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
 export async function generateMetadata() {
   const BASE_URL = HOME_PAGE_URL;

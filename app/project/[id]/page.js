@@ -8,6 +8,9 @@ import {
   WEBSITE_MAIN_LOGO,
 } from "@/utils/constant";
 
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 export async function generateMetadata({ params }) {
   const { id } = await params;
   const BASE_URL = HOME_PAGE_URL;
