@@ -9,7 +9,7 @@ export const revalidate = 0;
 export async function generateMetadata() {
   const BASE_URL = HOME_PAGE_URL;
 
-  const { title, description, LOGO_URL } = await getGlobalSeo();
+  const { title, description, LOGO_URL, version } = await getGlobalSeo();
 
   console.log("🚀 ~ generateMetadata ~ title:", title)
   console.log("🚀 ~ generateMetadata ~ description:", description)
@@ -22,17 +22,17 @@ export async function generateMetadata() {
     description,
 
     alternates: {
-      canonical: `${BASE_URL}`,
+      canonical: `${BASE_URL}?v=${version}`,
     },
 
     openGraph: {
       type: "website",
-      url: `${BASE_URL}`,
+      url: `${BASE_URL}?v=${version}`,
       title,
       description,
       images: [
         {
-          url: LOGO_URL,
+          url: `${LOGO_URL}?v=${version}`,
           width: 1200,
           height: 630,
           alt: title,
@@ -44,7 +44,7 @@ export async function generateMetadata() {
       card: "summary_large_image",
       title,
       description,
-      images: [LOGO_URL],
+      images: [`${LOGO_URL}?v=${version}`],
     },
   };
 }
