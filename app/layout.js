@@ -15,63 +15,42 @@ import {
 
 export const dynamic = "force-dynamic";
 
-  export async function generateMetadata() {
-    let TITLE = DEFAULT_META_TITLE;
-    let DESCRIPTION = DEFAULT_META_DESCRIPTION;
-  
-    const BASE_URL = HOME_PAGE_URL;
-  
-    try {
-      const settingResponse = await getSetting({ offset: 0, limit: 1 });
-  
-      const settingRecord =
-        settingResponse?.data?.[0] || settingResponse?.data || null;
-  
-      TITLE = settingRecord?.setting_meta_title || TITLE;
-      DESCRIPTION =
-        settingRecord?.setting_meta_description || DESCRIPTION;
-    } catch (error) {
-      console.error("Metadata error:", error);
-    }
-  
-    return {
-      metadataBase: new URL(BASE_URL),
-  
-      title: TITLE,
-      description: DESCRIPTION,
-      icons: {
-        icon: [
-          {
-            url: WEBSITE_MAIN_LOGO,
-            width: 1200,
-            height: 630,
-            alt: TITLE,
-          },
-        ],
-      },
-  
-      openGraph: {
-        type: "website",
-        title: TITLE,
-        description: DESCRIPTION,
-        images: [
-          {
-            url: WEBSITE_MAIN_LOGO,
-            width: 1200,
-            height: 630,
-            alt: TITLE,
-          },
-        ],
-      },
+export async function generateMetadata() {
+  let title = DEFAULT_META_TITLE;
+  let description = DEFAULT_META_DESCRIPTION;
 
-      twitter: {
-        card: "summary_large_image",
-        title: TITLE,
-        description: DESCRIPTION,
-        images: [WEBSITE_MAIN_LOGO],
-      },
-    };
+  try {
+    const settingResponse = await getSetting({ offset: 0, limit: 1 });
+    const settingRecord =
+      settingResponse?.data?.[0] || settingResponse?.data || null;
+
+    title = settingRecord?.setting_meta_title || title;
+    description = settingRecord?.setting_meta_description || description;
+  } catch {
+    // fall back to defaults
   }
+
+  return {
+    metadataBase: new URL(HOME_PAGE_URL),
+    title,
+    description,
+    icons: {
+      icon: "/images/logos/favicon.png",
+    },
+    openGraph: {
+      type: "website",
+      title,
+      description,
+      images: ["/images/logos/favicon.png"],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: ["/images/logos/favicon.png"],
+    },
+  };
+}
 
 export const viewport = {
   themeColor: "#000000",
@@ -81,11 +60,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <link
-          rel="preload"
-          as="image"
-          href="/images/background/slider-1.png"
-        />
+        <link rel="preload" as="image" href="/images/background/slider-1.png" />
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
