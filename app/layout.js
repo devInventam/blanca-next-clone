@@ -47,16 +47,18 @@ export const dynamic = "force-dynamic";
         images: [
           {
             url: WEBSITE_MAIN_LOGO,
-            width: 1200,
-            height: 630,
+            width: 500,
+            height: 163,
+            alt: TITLE,
           },
         ],
       },
-  
+
       twitter: {
         card: "summary_large_image",
         title: TITLE,
         description: DESCRIPTION,
+        images: [WEBSITE_MAIN_LOGO],
       },
     };
   }
