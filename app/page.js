@@ -11,6 +11,10 @@ export async function generateMetadata() {
 
   const { title, description, LOGO_URL } = await getGlobalSeo();
 
+  console.log("🚀 ~ generateMetadata ~ title:", title)
+  console.log("🚀 ~ generateMetadata ~ description:", description)
+  console.log("🚀 ~ generateMetadata ~ LOGO_URL:", LOGO_URL)
+
   return {
     metadataBase: new URL(BASE_URL),
 
@@ -44,6 +48,7 @@ export async function generateMetadata() {
     },
   };
 }
+
 
 export default async function Page() {
   const projectsResponse = await getProjects({

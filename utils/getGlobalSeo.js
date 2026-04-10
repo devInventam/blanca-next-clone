@@ -3,6 +3,7 @@ import {
   DEFAULT_META_DESCRIPTION,
   DEFAULT_META_TITLE,
   HOME_PAGE_URL,
+  BASE_API_URL,
   WEBSITE_MAIN_LOGO,
 } from "@/utils/constant";
 
@@ -14,12 +15,15 @@ export async function getGlobalSeo() {
     ? WEBSITE_MAIN_LOGO
     : `${HOME_PAGE_URL}/uploads/images/blanca-logo.png`;
 
-  try {
-    const settingResponse = await getSetting({
-      offset: 0,
-      limit: 1,
-      t: Date.now(),
-    });
+    const res = await fetch(
+      `${BASE_API_URL}setting?offset=0&limit=1&t=${Date.now()}`,
+      {
+        cache: "no-store",
+      }
+    );
+
+
+    const settingResponse = await res.json();
 
     const settingRecord =
       settingResponse?.data?.[0] || settingResponse?.data || null;
@@ -27,7 +31,6 @@ export async function getGlobalSeo() {
     title = settingRecord?.setting_meta_title || title;
     description =
       settingRecord?.setting_meta_description || description;
-  } catch {}
 
   return {
     title,
