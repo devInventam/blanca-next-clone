@@ -35,19 +35,19 @@ export async function generateMetadata() {
     title,
     description,
     icons: {
-      icon: "/images/logos/favicon.png",
+      icon: WEBSITE_MAIN_LOGO,
     },
     openGraph: {
       type: "website",
       title,
       description,
-      images: ["/images/logos/favicon.png"],
+      images: [WEBSITE_MAIN_LOGO],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: ["/images/logos/favicon.png"],
+      images: [WEBSITE_MAIN_LOGO],
     },
   };
 }
