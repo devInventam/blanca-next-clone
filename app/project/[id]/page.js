@@ -5,6 +5,7 @@ import {
   DEFAULT_META_DESCRIPTION,
   DEFAULT_META_TITLE,
   HOME_PAGE_URL,
+  WEBSITE_MAIN_LOGO,
 } from "@/utils/constant";
 
 export async function generateMetadata({ params }) {
@@ -41,7 +42,7 @@ export async function generateMetadata({ params }) {
 
     const images = project?.project_card_image
       ? [project?.project_card_image]
-      : [`${BASE_URL}/images/logos/favicon.png`];
+      : [WEBSITE_MAIN_LOGO];
 
     return {
       title,

@@ -41,16 +41,22 @@
 }
 
 .registration-tab-wrapper {
-    position: relative;
-    display: flex;
-    gap: 40px;
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    -webkit-backdrop-filter: blur(15px);
     border-radius: 20px;
+    gap: 40px;
+    /* min-height: 600px; */
     padding: 30px;
-    backdrop-filter: blur(15px);
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
-    min-height: 600px;
+    display: flex;
+    position: relative;
+    background: rgba(255, 255, 255, 0.02);
+    color: var(--lg-text);
+    border: 1px solid var(--lg-highlight);
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease, border-color 0.2s ease, backdrop-filter 0.4s ease;
+    overflow: hidden;
+    isolation: isolate;
 }
 
 /* Sidebar Styling */
@@ -442,6 +448,7 @@
     .registration-form-section {
         padding: 60px 0 60px;
     }
+
     .registration-tab-wrapper {
         flex-direction: column;
         gap: 30px;

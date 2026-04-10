@@ -219,6 +219,7 @@
     border-radius: 16px;
     height: 100%;
     margin-bottom: 5px;
+    position: relative;
 }
 
 .project-card-horizontal .horiz-content .project-download-options-horizontal {

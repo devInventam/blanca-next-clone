@@ -10,6 +10,7 @@ import {
   DEFAULT_META_DESCRIPTION,
   DEFAULT_META_TITLE,
   HOME_PAGE_URL,
+  WEBSITE_MAIN_LOGO,
 } from "@/utils/constant";
 
 export const dynamic = "force-dynamic";
@@ -45,7 +46,7 @@ export const dynamic = "force-dynamic";
         description: DESCRIPTION,
         images: [
           {
-            url: `${BASE_URL}/images/logos/blanca-logo.png`,
+            url: WEBSITE_MAIN_LOGO,
             width: 1200,
             height: 630,
           },
