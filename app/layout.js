@@ -39,6 +39,16 @@ export const dynamic = "force-dynamic";
   
       title: TITLE,
       description: DESCRIPTION,
+      icons: {
+        icon: [
+          {
+            url: WEBSITE_MAIN_LOGO,
+            width: 1200,
+            height: 630,
+            alt: TITLE,
+          },
+        ],
+      },
   
       openGraph: {
         type: "website",
@@ -47,8 +57,8 @@ export const dynamic = "force-dynamic";
         images: [
           {
             url: WEBSITE_MAIN_LOGO,
-            width: 500,
-            height: 163,
+            width: 1200,
+            height: 630,
             alt: TITLE,
           },
         ],
