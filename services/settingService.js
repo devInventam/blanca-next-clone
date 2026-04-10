@@ -7,6 +7,10 @@ export const getSetting = async (params) => {
       limit: 10,
       ...(params || {}),
     },
+    headers: {
+      "Cache-Control": "no-cache",
+      Pragma: "no-cache",
+    },
   });
   return data;
 };

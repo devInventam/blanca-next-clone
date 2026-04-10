@@ -14,10 +14,15 @@ import {
 } from "@/utils/constant";
 
 export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
 export async function generateMetadata() {
   let title = DEFAULT_META_TITLE;
   let description = DEFAULT_META_DESCRIPTION;
+
+  const LOGO_URL = WEBSITE_MAIN_LOGO.startsWith("http")
+  ? WEBSITE_MAIN_LOGO
+  : `${HOME_PAGE_URL}/uploads/images/blanca-logo.png`;
 
   try {
     const settingResponse = await getSetting({ offset: 0, limit: 1 });
@@ -35,22 +40,23 @@ export async function generateMetadata() {
     title,
     description,
     icons: {
-      icon: WEBSITE_MAIN_LOGO,
+      icon: LOGO_URL,
     },
     openGraph: {
       type: "website",
       title,
       description,
-      images: [WEBSITE_MAIN_LOGO],
+      images: [LOGO_URL],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: [WEBSITE_MAIN_LOGO],
+      images: [LOGO_URL],
     },
   };
 }
+
 
 export const viewport = {
   themeColor: "#000000",
